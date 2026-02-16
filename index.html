@@ -1134,7 +1134,48 @@ document.addEventListener('DOMContentLoaded', function() {
 </section>
 
 
+<style>
+  /* Target the specific Elfsight attribution link */
+.elfsight-app-8f3eba95-0446-4f7c-9e9a-4386f21ac64d a[href*="elfsight.com"] {
+    display: none !important;
+    position: absolute !important;
+    left: -9999px !important;
+    opacity: 0 !important;
+}
 
+/* Ensure the container doesn't show the empty space */
+.elfsight-app-8f3eba95-0446-4f7c-9e9a-4386f21ac64d > div:last-child {
+    display: none !important;
+}
+</style>
+<script>
+  const observer = new MutationObserver(() => {
+    // Select the specific link rather than the whole container
+    const badge = document.querySelector('a[href*="elfsight.com"]');
+    
+    if (badge) {
+      // Hide ONLY the link, not the parent
+      badge.style.display = 'none';
+      badge.style.opacity = '0';
+      badge.style.height = '0';
+      badge.style.position = 'absolute';
+      badge.style.pointerEvents = 'none';
+      
+      // If the link is inside a small branding div, hide that specifically
+      if (badge.parentElement && badge.parentElement.innerText.includes("Free Instagram")) {
+         badge.parentElement.style.height = '0';
+         badge.parentElement.style.overflow = 'hidden';
+      }
+      
+      observer.disconnect(); 
+    }
+  });
+
+  observer.observe(document.body, {
+    childList: true,
+    subtree: true
+  });
+</script>
 <section class="contact-connect">
   <!-- Decorative background elements -->
   <div class="connect-bg-orb orb-purple"></div>
