@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us</title>
+    <link rel="stylesheet" href="csss/style.css">
+    <link rel="stylesheet" href="aboutsep.css">
+</head>
+<body>
+  
+<section class="navbar-section" id="navbar-section">
+  <!-- Sticky glassmorphism navbar -->
+  <nav class="navbar" id="mainNavbar">
+    <div class="nav-container">
+      <!-- Logo with INLINE CSS for EXTRA BIG SIZE + Practice Pedodontics text (right side of logo) -->
+      <div class="nav-logo">
+        <img src="logopp.jpeg" alt="PediaCare" class="logo-img" style="height: 70px; width: auto; max-width: 320px; object-fit: contain; display: block;">
+        <span class="logo-fallback" style="display: none;">PediaCare</span>
+        <!-- Practice Pedodontics text - RIGHT SIDE OF LOGO -->
+        <div class="practice-text" style="margin-left: 20px; font-size: 1.5rem; font-weight: 600; color: var(--primary); letter-spacing: 0.5px; border-left: 3px solid var(--accent); padding-left: 20px; line-height: 1.3;">
+          Practice<br>Pedodontics
+        </div>
+      </div>
+
+      <!-- Desktop Navigation -->
+      <ul class="nav-menu" id="navMenu">
+        <li class="nav-item">
+          <a href="index.html" class="nav-link active">Home</a>
+        </li>
+        <li class="nav-item">
+          <a href="about.html" class="nav-link">About Us</a>
+        </li>
+        <li class="nav-item dropdown-trigger">
+          <a href="index.html#courses" class="nav-link">
+            Courses
+            <svg class="dropdown-icon" width="16" height="16" viewBox="0 0 16 16" fill="none">
+              <path d="M4 6L8 10L12 6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+            </svg>
+          </a>
+          <!-- Mega Menu - PEDODONTICS COURSES -->
+         <div class="mega-menu">
+  <div class="mega-menu-container">
+    <div class="mega-column">
+      <a href="course1.html">
+        <div class="course-card">
+          <div class="course-icon">🦷</div>
+          <div class="course-content">
+            <h4>Pediatric Dentistry</h4>
+            <p>Primary teeth care & treatment</p>
+          </div>
+        </div>
+      </a>
+      
+      <a href="course2.html">
+        <div class="course-card">
+          <div class="course-icon">😁</div>
+          <div class="course-content">
+            <h4>Child Orthodontics</h4>
+            <p>Early intervention & braces</p>
+          </div>
+        </div>
+      </a>
+      
+      <a href="course3.html">
+        <div class="course-card">
+          <div class="course-icon">🦷</div>
+          <div class="course-content">
+            <h4>Pulp Therapy</h4>
+            <p>Pediatric root canals</p>
+          </div>
+        </div>
+      </a>
+    </div>
+    
+    <div class="mega-column">
+      <a href="course4.html">
+        <div class="course-card">
+          <div class="course-icon">🔬</div>
+          <div class="course-content">
+            <h4>Dental Radiology</h4>
+            <p>Pediatric imaging techniques</p>
+          </div>
+        </div>
+      </a>
+      
+      <a href="course5.html">
+        <div class="course-card">
+          <div class="course-icon">🦷</div>
+          <div class="course-content">
+            <h4>Preventive Dentistry</h4>
+            <p>Fluoride & sealants</p>
+          </div>
+        </div>
+      </a>
+      
+      <a href="course6.html">
+        <div class="course-card">
+          <div class="course-icon">😴</div>
+          <div class="course-content">
+            <h4>Sedation Dentistry</h4>
+            <p>Pediatric behavior management</p>
+          </div>
+        </div>
+      </a>
+    </div>
+  </div>
+</div>
+        </li>
+        <li class="nav-item">
+          <a href="blog.html" class="nav-link">Blog</a>
+        </li>
+        <li class="nav-item">
+          <a href="contactsep.html" class="nav-link">Contact Us</a>
+        </li>
+      </ul>
+
+      <!-- HAMBURGER -->
+      <div class="hamburger" id="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+  </nav>
+
+  <!-- MOBILE MENU -->
+  <div class="mobile-overlay" id="mobileOverlay"></div>
+  <div class="mobile-menu" id="mobileMenu">
+    <div class="mobile-menu-header">
+      <div style="display: flex; align-items: center; gap: 12px;">
+        <img src="logopp.jpeg" alt="PediaCare" class="mobile-logo-img" style="height: 80px; width: auto; max-width: 260px; object-fit: contain; display: block;">
+        <div style="font-size: 1.2rem; font-weight: 600; color: var(--primary); border-left: 2px solid var(--accent); padding-left: 12px; line-height: 1.3;">
+          Practice<br>Pedodontics
+        </div>
+      </div>
+      <span class="mobile-logo-fallback" style="display: none;">PediaCare</span>
+      <button class="mobile-close" id="mobileClose">✕</button>
+    </div>
+    <ul class="mobile-nav-list">
+      <li class="mobile-nav-item">
+        <a href="index.html" class="mobile-nav-link active">Home</a>
+      </li>
+      <li class="mobile-nav-item">
+        <a href="about.html" class="mobile-nav-link">About Us</a>
+      </li>
+      <li class="mobile-nav-item" style="list-style: none;">
+  <div class="mobile-link-wrapper" style="display: flex; align-items: center; justify-content: space-between; width: 100%; cursor: pointer; padding: 12px 0;" onclick="toggleMobileSubmenu(event)">
+    <a href="#" class="mobile-nav-link" style="text-decoration: none; color: var(--text-dark); font-weight: 500; flex: 1; pointer-events: none;">Courses</a>
+    <button class="submenu-toggle" id="coursesToggle" style="background: none; border: 1px solid var(--primary); border-radius: 50%; width: 32px; height: 32px; cursor: pointer; color: var(--primary); font-size: 1.2rem; display: flex; align-items: center; justify-content: center; margin-left: 10px; flex-shrink: 0;" onclick="event.stopPropagation(); toggleMobileSubmenu(event)">
+      <span>+</span>
+    </button>
+  </div>
+  
+  <ul class="mobile-submenu" id="mobileSubmenu" style="display: none; list-style: none; padding-left: 20px; margin: 5px 0 0 0; background: #f9f9f9; border-radius: 8px;">
+    <li class="mobile-submenu-item" style="margin-bottom: 8px; padding: 8px 0; border-bottom: 1px solid #eee;">
+      <a href="course1.html" class="mobile-nav-link" style="display: flex; align-items: center; gap: 10px; text-decoration: none; color: var(--text-dark);" onclick="event.stopPropagation();">
+        <span class="menu-icon" style="font-size: 1.2rem;">🦷</span>
+        <span>Pediatric Dentistry</span>
+      </a>
+    </li>
+    <li class="mobile-submenu-item" style="margin-bottom: 8px; padding: 8px 0; border-bottom: 1px solid #eee;">
+      <a href="course2.html" class="mobile-nav-link" style="display: flex; align-items: center; gap: 10px; text-decoration: none; color: var(--text-dark);" onclick="event.stopPropagation();">
+        <span class="menu-icon" style="font-size: 1.2rem;">😁</span>
+        <span>Child Orthodontics</span>
+      </a>
+    </li>
+    <li class="mobile-submenu-item" style="margin-bottom: 8px; padding: 8px 0; border-bottom: 1px solid #eee;">
+      <a href="course3.html" class="mobile-nav-link" style="display: flex; align-items: center; gap: 10px; text-decoration: none; color: var(--text-dark);" onclick="event.stopPropagation();">
+        <span class="menu-icon" style="font-size: 1.2rem;">🦷</span>
+        <span>Pulp Therapy</span>
+      </a>
+    </li>
+    <li class="mobile-submenu-item" style="margin-bottom: 8px; padding: 8px 0; border-bottom: 1px solid #eee;">
+      <a href="course4.html" class="mobile-nav-link" style="display: flex; align-items: center; gap: 10px; text-decoration: none; color: var(--text-dark);" onclick="event.stopPropagation();">
+        <span class="menu-icon" style="font-size: 1.2rem;">🔬</span>
+        <span>Dental Radiology</span>
+      </a>
+    </li>
+    <li class="mobile-submenu-item" style="margin-bottom: 8px; padding: 8px 0; border-bottom: 1px solid #eee;">
+      <a href="course5.html" class="mobile-nav-link" style="display: flex; align-items: center; gap: 10px; text-decoration: none; color: var(--text-dark);" onclick="event.stopPropagation();">
+        <span class="menu-icon" style="font-size: 1.2rem;">🦷</span>
+        <span>Preventive Dentistry</span>
+      </a>
+    </li>
+    <li class="mobile-submenu-item" style="margin-bottom: 8px; padding: 8px 0;">
+      <a href="course6.html" class="mobile-nav-link" style="display: flex; align-items: center; gap: 10px; text-decoration: none; color: var(--text-dark);" onclick="event.stopPropagation();">
+        <span class="menu-icon" style="font-size: 1.2rem;">😴</span>
+        <span>Sedation Dentistry</span>
+      </a>
+    </li>
+  </ul>
+</li>
+
+<style>
+  /* Ensure the entire wrapper is clickable */
+  .mobile-link-wrapper {
+    cursor: pointer;
+    user-select: none;
+  }
+  
+  /* Submenu initially hidden */
+  .mobile-submenu {
+    display: none !important;
+  }
+  
+  /* When active class is added, show submenu */
+  .mobile-submenu.active {
+    display: block !important;
+  }
+</style>
+
+<script>
+// Simple JavaScript for toggling
+function toggleMobileSubmenu(event) {
+  event.preventDefault();
+  event.stopPropagation();
+  
+  var submenu = document.getElementById('mobileSubmenu');
+  var toggleBtn = document.getElementById('coursesToggle');
+  var icon = toggleBtn ? toggleBtn.querySelector('span') : null;
+  
+  if (submenu) {
+    // Toggle active class
+    submenu.classList.toggle('active');
+    
+    // Update icon
+    if (icon) {
+      if (submenu.classList.contains('active')) {
+        icon.textContent = '−';
+      } else {
+        icon.textContent = '+';
+      }
+    }
+  }
+}
+
+// Initialize - ensure submenu starts hidden
+document.addEventListener('DOMContentLoaded', function() {
+  var submenu = document.getElementById('mobileSubmenu');
+  if (submenu) {
+    submenu.classList.remove('active');
+  }
+});
+</script>
+      <li class="mobile-nav-item">
+        <a href="blog.html" class="mobile-nav-link">Blog</a>
+      </li>
+      <li class="mobile-nav-item">
+        <a href="contactsep.html" class="mobile-nav-link">Contact Us</a>
+      </li>
+    </ul>
+  </div>
+  
+
+  <!-- Floating Settings Button - COLORFUL -->
+  <button class="floating-settings" id="themeToggleBtn">
+    <span class="color-dots">
+      <span style="background: #FF6B35;"></span>
+      <span style="background: #7AC943;"></span>
+      <span style="background: #FF1493;"></span>
+      <span style="background: #FFD700;"></span>
+    </span>
+  </button>
+
+  <!-- Theme Panel -->
+  <div class="theme-panel" id="themePanel">
+    <div class="theme-panel-header">
+      <h4>Themes</h4>
+      <button class="close-panel" id="closePanel">✕</button>
+    </div>
+    <div class="theme-options">
+      <div class="theme-option" data-theme="theme1">Royal Purple</div>
+      <div class="theme-option" data-theme="theme2">Ocean Teal</div>
+      <div class="theme-option" data-theme="theme3">Berry Pink</div>
+      <div class="theme-option" data-theme="theme4">Forest Green</div>
+      <div class="theme-option" data-theme="theme5">Sunset Orange</div>
+    </div>
+  </div>
+</section>
+
+
+<br><br><br><br><br><br>
+
+<!-- About Page - All Sections Combined -->
+
+<!-- 1) Page Hero Header -->
+<section class="about-page-hero">
+  <div class="about-hero-container">
+    <div class="breadcrumb">
+      <a href="#">Home</a>
+      <span class="separator">/</span>
+      <span class="current">About Us</span>
+    </div>
+    <h1 class="about-hero-title">About Us</h1>
+    <p class="about-hero-subtitle">Dedicated to excellence in pediatric dental education and patient care since 2005</p>
+  </div>
+</section>
+
+<!-- 2) Who We Are Section -->
+<section class="who-we-are">
+  <div class="about-container">
+    <div class="who-we-are-grid">
+      <div class="who-image-wrapper">
+        <img src="https://images.pexels.com/photos/3779718/pexels-photo-3779718.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&fit=crop" alt="Our Institute" class="who-image">
+        <div class="image-accent"></div>
+      </div>
+      <div class="who-content">
+        <h2 class="section-heading">Who We Are</h2>
+        <p class="who-paragraph">Pedodontic Practice Institute was founded with a singular vision: to transform pediatric dental education and elevate the standard of care for children. We are a premier training center dedicated to dental professionals seeking excellence in pediatric dentistry.</p>
+        <p class="who-paragraph">Our institute combines state-of-the-art facilities with experienced faculty to create an immersive learning environment. We believe that every child deserves compassionate, expert dental care, and we train our students to deliver exactly that.</p>
+        <ul class="who-list">
+          <li>
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+              <circle cx="10" cy="10" r="8" fill="var(--accent)" fill-opacity="0.2" stroke="var(--accent)" stroke-width="2"/>
+              <path d="M6 10L9 13L14 7" stroke="var(--accent)" stroke-width="2" stroke-linecap="round"/>
+            </svg>
+            <span>15+ years of excellence in dental education</span>
+          </li>
+          <li>
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+              <circle cx="10" cy="10" r="8" fill="var(--accent)" fill-opacity="0.2" stroke="var(--accent)" stroke-width="2"/>
+              <path d="M6 10L9 13L14 7" stroke="var(--accent)" stroke-width="2" stroke-linecap="round"/>
+            </svg>
+            <span>Internationally recognized faculty</span>
+          </li>
+          <li>
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+              <circle cx="10" cy="10" r="8" fill="var(--accent)" fill-opacity="0.2" stroke="var(--accent)" stroke-width="2"/>
+              <path d="M6 10L9 13L14 7" stroke="var(--accent)" stroke-width="2" stroke-linecap="round"/>
+            </svg>
+            <span>Hands-on training with modern equipment</span>
+          </li>
+          <li>
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+              <circle cx="10" cy="10" r="8" fill="var(--accent)" fill-opacity="0.2" stroke="var(--accent)" stroke-width="2"/>
+              <path d="M6 10L9 13L14 7" stroke="var(--accent)" stroke-width="2" stroke-linecap="round"/>
+            </svg>
+            <span>100% clinical placement rate</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 3) Our Vision & Mission Section -->
+<section class="vision-mission">
+  <div class="about-container">
+    <div class="vision-mission-grid">
+      <div class="vision-card">
+        <div class="card-icon">
+          <svg width="32" height="32" viewBox="0 0 24 24" fill="none">
+            <circle cx="12" cy="12" r="10" stroke="var(--accent)" stroke-width="2"/>
+            <path d="M12 8V12L15 15" stroke="var(--accent)" stroke-width="2" stroke-linecap="round"/>
+          </svg>
+        </div>
+        <h3 class="card-title">Our Vision</h3>
+        <p class="card-text">To be the global leader in pediatric dental education, setting the standard for excellence in child-centered dental care and professional development.</p>
+      </div>
+      <div class="mission-card">
+        <div class="card-icon">
+          <svg width="32" height="32" viewBox="0 0 24 24" fill="none">
+            <path d="M12 2L15 9H22L16 14L19 21L12 16.5L5 21L8 14L2 9H9L12 2Z" stroke="var(--accent)" stroke-width="2"/>
+          </svg>
+        </div>
+        <h3 class="card-title">Our Mission</h3>
+        <p class="card-text">To empower dental professionals with advanced knowledge and clinical skills through evidence-based training, fostering compassionate care for every child.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 4) Why Choose Us Section -->
+<section class="why-choose">
+  <div class="about-container">
+    <div class="section-header-center">
+      <h2 class="section-heading">Why Choose Us</h2>
+      <p class="section-subtitle">Excellence that sets us apart</p>
+    </div>
+    <div class="choose-grid">
+      <div class="choose-card">
+        <span class="card-emoji">👩‍⚕️</span>
+        <h3 class="card-heading">Expert Faculty</h3>
+        <p class="card-desc">Learn from leading pediatric dentists with decades of clinical and teaching experience.</p>
+      </div>
+      <div class="choose-card">
+        <span class="card-emoji">🏥</span>
+        <h3 class="card-heading">Modern Facilities</h3>
+        <p class="card-desc">State-of-the-art simulation labs and clinical equipment for hands-on training.</p>
+      </div>
+      <div class="choose-card">
+        <span class="card-emoji">📚</span>
+        <h3 class="card-heading">Comprehensive Curriculum</h3>
+        <p class="card-desc">Evidence-based courses covering all aspects of pediatric dentistry.</p>
+      </div>
+      <div class="choose-card">
+        <span class="card-emoji">🤝</span>
+        <h3 class="card-heading">Personalized Mentoring</h3>
+        <p class="card-desc">Small batch sizes ensuring individual attention and guidance.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 5) Our Achievements / Stats Section -->
+<section class="achievements">
+  <div class="about-container">
+    <div class="stats-grid">
+      <div class="stat-item">
+        <span class="stat-number" data-target="15">0</span>
+        <span class="stat-label">Years of Excellence</span>
+      </div>
+      <div class="stat-item">
+        <span class="stat-number" data-target="5000">0</span>
+        <span class="stat-label">Students Trained</span>
+      </div>
+      <div class="stat-item">
+        <span class="stat-number" data-target="25">0</span>
+        <span class="stat-label">Courses Offered</span>
+      </div>
+      <div class="stat-item">
+        <span class="stat-number" data-target="98">0</span>
+        <span class="stat-label">Success Rate</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 6) Our Team Section -->
+<section class="our-team">
+  <div class="about-container">
+    <div class="section-header-center">
+      <h2 class="section-heading">Meet Our Team</h2>
+      <p class="section-subtitle">Dedicated experts in pediatric dentistry</p>
+    </div>
+    <div class="team-grid">
+      <div class="team-card">
+        <div class="team-image-wrapper">
+          <img src="https://images.pexels.com/photos/5215024/pexels-photo-5215024.jpeg?auto=compress&cs=tinysrgb&w=400&h=400&fit=crop" alt="Dr. Sarah Mitchell" class="team-image">
+        </div>
+        <h3 class="team-name">Dr. Sarah Mitchell</h3>
+        <p class="team-role">Founder & Lead Instructor</p>
+        <p class="team-bio">Pediatric dentistry specialist with 18+ years of clinical and teaching experience.</p>
+      </div>
+      <div class="team-card">
+        <div class="team-image-wrapper">
+          <img src="https://images.pexels.com/photos/5327585/pexels-photo-5327585.jpeg?auto=compress&cs=tinysrgb&w=400&h=400&fit=crop" alt="Dr. James Wilson" class="team-image">
+        </div>
+        <h3 class="team-name">Dr. James Wilson</h3>
+        <p class="team-role">Clinical Director</p>
+        <p class="team-bio">Expert in pediatric sedation and advanced clinical techniques.</p>
+      </div>
+      <div class="team-card">
+        <div class="team-image-wrapper">
+          <img src="https://images.pexels.com/photos/5215024/pexels-photo-5215024.jpeg?auto=compress&cs=tinysrgb&w=400&h=400&fit=crop" alt="Dr. Priya Sharma" class="team-image">
+        </div>
+        <h3 class="team-name">Dr. Priya Sharma</h3>
+        <p class="team-role">Orthodontics Specialist</p>
+        <p class="team-bio">Leading expert in early orthodontic intervention and growth guidance.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+<!-- Call To Action Section with Form Modal -->
+<section class="cta-section">
+  <div class="about-container">
+    <div class="cta-content">
+      <h2 class="cta-heading">Ready to Advance Your Career?</h2>
+      <p class="cta-text">Join our upcoming courses and transform your pediatric dental practice.</p>
+      <button class="cta-button" id="openEnrollForm">Enroll Now</button>
+    </div>
+  </div>
+
+  <!-- Enrollment Form Modal -->
+  <div class="enroll-modal" id="enrollModal">
+    <div class="modal-overlay"></div>
+    <div class="modal-container">
+      <div class="modal-header">
+        <h3 class="modal-title">Course Enrollment</h3>
+        <button class="modal-close" id="closeEnrollForm">×</button>
+      </div>
+      <form class="enroll-form" id="enrollmentForm">
+        <div class="form-group">
+          <label for="fullName" class="form-label">Full Name *</label>
+          <input type="text" id="fullName" class="form-input" placeholder="Enter your full name" required>
+          <div class="error-message" id="nameError"></div>
+        </div>
+        
+        <div class="form-group">
+          <label for="phoneNumber" class="form-label">Phone Number *</label>
+          <input type="tel" id="phoneNumber" class="form-input" placeholder="9876543210" maxlength="10" required>
+          <div class="error-message" id="phoneError"></div>
+        </div>
+        
+        <div class="form-group">
+          <label for="selectCourse" class="form-label">Select Course *</label>
+          <select id="selectCourse" class="form-select" required>
+            <option value="" disabled selected>Choose a course</option>
+            <option value="Pediatric Dentistry Fundamentals">Pediatric Dentistry Fundamentals</option>
+            <option value="Advanced Pediatric Clinical Techniques">Advanced Pediatric Clinical Techniques</option>
+            <option value="Pedodontic Orthodontics & Growth Guidance">Pedodontic Orthodontics & Growth Guidance</option>
+            <option value="Pediatric Sedation & Pain Management">Pediatric Sedation & Pain Management</option>
+            <option value="Special Needs Dentistry & Hospital Care">Special Needs Dentistry & Hospital Care</option>
+            <option value="Pediatric Dental Trauma & Emergency Management">Pediatric Dental Trauma & Emergency Management</option>
+          </select>
+          <div class="error-message" id="courseError"></div>
+        </div>
+        
+        <button type="submit" class="submit-btn" id="submitEnrollment">Submit & Enroll</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+</body>
+<script src="script.js"></script>
+<script src="aboutsep.js"></script>
+</html>

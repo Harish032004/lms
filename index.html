@@ -1,0 +1,1660 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="csss/about.css">
+    <link rel="stylesheet" href="csss/hero.css">
+    <link rel="stylesheet" href="csss/courses.css">
+    <link rel="stylesheet" href="csss/style.css">
+    <link rel="stylesheet" href="csss/insta.css">
+    <link rel="stylesheet" href="homecontact.css">
+    <link rel="stylesheet" href="footer.css">
+</head>
+<body>
+
+<section class="navbar-section" id="navbar-section">
+  <!-- Sticky glassmorphism navbar -->
+  <nav class="navbar" id="mainNavbar">
+    <div class="nav-container">
+      <!-- Logo with INLINE CSS for EXTRA BIG SIZE + Practice Pedodontics text (right side of logo) -->
+      <div class="nav-logo">
+        <img src="logopp.jpeg" alt="PediaCare" class="logo-img" style="height: 70px; width: auto; max-width: 320px; object-fit: contain; display: block;">
+        <span class="logo-fallback" style="display: none;">PediaCare</span>
+        <!-- Practice Pedodontics text - RIGHT SIDE OF LOGO -->
+        <div class="practice-text" style="margin-left: 20px; font-size: 1.5rem; font-weight: 600; color: var(--primary); letter-spacing: 0.5px; border-left: 3px solid var(--accent); padding-left: 20px; line-height: 1.3;">
+          Practice<br>Pedodontics
+        </div>
+      </div>
+
+      <!-- Desktop Navigation -->
+      <ul class="nav-menu" id="navMenu">
+        <li class="nav-item">
+          <a href="index.html" class="nav-link active">Home</a>
+        </li>
+        <li class="nav-item">
+          <a href="about.html" class="nav-link">About Us</a>
+        </li>
+        <li class="nav-item dropdown-trigger">
+          <a href="index.html#courses" class="nav-link">
+            Courses
+            <svg class="dropdown-icon" width="16" height="16" viewBox="0 0 16 16" fill="none">
+              <path d="M4 6L8 10L12 6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+            </svg>
+          </a>
+          <!-- Mega Menu - PEDODONTICS COURSES -->
+         <div class="mega-menu">
+  <div class="mega-menu-container">
+    <div class="mega-column">
+      <a href="course1.html">
+        <div class="course-card">
+          <div class="course-icon">🦷</div>
+          <div class="course-content">
+            <h4>Pediatric Dentistry</h4>
+            <p>Primary teeth care & treatment</p>
+          </div>
+        </div>
+      </a>
+      
+      <a href="course2.html">
+        <div class="course-card">
+          <div class="course-icon">😁</div>
+          <div class="course-content">
+            <h4>Child Orthodontics</h4>
+            <p>Early intervention & braces</p>
+          </div>
+        </div>
+      </a>
+      
+      <a href="course3.html">
+        <div class="course-card">
+          <div class="course-icon">🦷</div>
+          <div class="course-content">
+            <h4>Pulp Therapy</h4>
+            <p>Pediatric root canals</p>
+          </div>
+        </div>
+      </a>
+    </div>
+    
+    <div class="mega-column">
+      <a href="course4.html">
+        <div class="course-card">
+          <div class="course-icon">🔬</div>
+          <div class="course-content">
+            <h4>Dental Radiology</h4>
+            <p>Pediatric imaging techniques</p>
+          </div>
+        </div>
+      </a>
+      
+      <a href="course5.html">
+        <div class="course-card">
+          <div class="course-icon">🦷</div>
+          <div class="course-content">
+            <h4>Preventive Dentistry</h4>
+            <p>Fluoride & sealants</p>
+          </div>
+        </div>
+      </a>
+      
+      <a href="course6.html">
+        <div class="course-card">
+          <div class="course-icon">😴</div>
+          <div class="course-content">
+            <h4>Sedation Dentistry</h4>
+            <p>Pediatric behavior management</p>
+          </div>
+        </div>
+      </a>
+    </div>
+  </div>
+</div>
+        </li>
+        <li class="nav-item">
+          <a href="blog.html" class="nav-link">Blog</a>
+        </li>
+        <li class="nav-item">
+          <a href="contactsep.html" class="nav-link">Contact Us</a>
+        </li>
+      </ul>
+
+      <!-- HAMBURGER -->
+      <div class="hamburger" id="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+  </nav>
+
+  <!-- MOBILE MENU -->
+  <div class="mobile-overlay" id="mobileOverlay"></div>
+  <div class="mobile-menu" id="mobileMenu">
+    <div class="mobile-menu-header">
+      <div style="display: flex; align-items: center; gap: 12px;">
+        <img src="logopp.jpeg" alt="PediaCare" class="mobile-logo-img" style="height: 80px; width: auto; max-width: 260px; object-fit: contain; display: block;">
+        <div style="font-size: 1.2rem; font-weight: 600; color: var(--primary); border-left: 2px solid var(--accent); padding-left: 12px; line-height: 1.3;">
+          Practice<br>Pedodontics
+        </div>
+      </div>
+      <span class="mobile-logo-fallback" style="display: none;">PediaCare</span>
+      <button class="mobile-close" id="mobileClose">✕</button>
+    </div>
+    <ul class="mobile-nav-list">
+      <li class="mobile-nav-item">
+        <a href="index.html" class="mobile-nav-link active">Home</a>
+      </li>
+      <li class="mobile-nav-item">
+        <a href="about.html" class="mobile-nav-link">About Us</a>
+      </li>
+      <li class="mobile-nav-item" style="list-style: none;">
+  <div class="mobile-link-wrapper" style="display: flex; align-items: center; justify-content: space-between; width: 100%; cursor: pointer; padding: 12px 0;" onclick="toggleMobileSubmenu(event)">
+    <a href="#" class="mobile-nav-link" style="text-decoration: none; color: var(--text-dark); font-weight: 500; flex: 1; pointer-events: none;">Courses</a>
+    <button class="submenu-toggle" id="coursesToggle" style="background: none; border: 1px solid var(--primary); border-radius: 50%; width: 32px; height: 32px; cursor: pointer; color: var(--primary); font-size: 1.2rem; display: flex; align-items: center; justify-content: center; margin-left: 10px; flex-shrink: 0;" onclick="event.stopPropagation(); toggleMobileSubmenu(event)">
+      <span>+</span>
+    </button>
+  </div>
+  
+  <ul class="mobile-submenu" id="mobileSubmenu" style="display: none; list-style: none; padding-left: 20px; margin: 5px 0 0 0; background: #f9f9f9; border-radius: 8px;">
+    <li class="mobile-submenu-item" style="margin-bottom: 8px; padding: 8px 0; border-bottom: 1px solid #eee;">
+      <a href="course1.html" class="mobile-nav-link" style="display: flex; align-items: center; gap: 10px; text-decoration: none; color: var(--text-dark);" onclick="event.stopPropagation();">
+        <span class="menu-icon" style="font-size: 1.2rem;">🦷</span>
+        <span>Pediatric Dentistry</span>
+      </a>
+    </li>
+    <li class="mobile-submenu-item" style="margin-bottom: 8px; padding: 8px 0; border-bottom: 1px solid #eee;">
+      <a href="course2.html" class="mobile-nav-link" style="display: flex; align-items: center; gap: 10px; text-decoration: none; color: var(--text-dark);" onclick="event.stopPropagation();">
+        <span class="menu-icon" style="font-size: 1.2rem;">😁</span>
+        <span>Child Orthodontics</span>
+      </a>
+    </li>
+    <li class="mobile-submenu-item" style="margin-bottom: 8px; padding: 8px 0; border-bottom: 1px solid #eee;">
+      <a href="course3.html" class="mobile-nav-link" style="display: flex; align-items: center; gap: 10px; text-decoration: none; color: var(--text-dark);" onclick="event.stopPropagation();">
+        <span class="menu-icon" style="font-size: 1.2rem;">🦷</span>
+        <span>Pulp Therapy</span>
+      </a>
+    </li>
+    <li class="mobile-submenu-item" style="margin-bottom: 8px; padding: 8px 0; border-bottom: 1px solid #eee;">
+      <a href="course4.html" class="mobile-nav-link" style="display: flex; align-items: center; gap: 10px; text-decoration: none; color: var(--text-dark);" onclick="event.stopPropagation();">
+        <span class="menu-icon" style="font-size: 1.2rem;">🔬</span>
+        <span>Dental Radiology</span>
+      </a>
+    </li>
+    <li class="mobile-submenu-item" style="margin-bottom: 8px; padding: 8px 0; border-bottom: 1px solid #eee;">
+      <a href="course5.html" class="mobile-nav-link" style="display: flex; align-items: center; gap: 10px; text-decoration: none; color: var(--text-dark);" onclick="event.stopPropagation();">
+        <span class="menu-icon" style="font-size: 1.2rem;">🦷</span>
+        <span>Preventive Dentistry</span>
+      </a>
+    </li>
+    <li class="mobile-submenu-item" style="margin-bottom: 8px; padding: 8px 0;">
+      <a href="course6.html" class="mobile-nav-link" style="display: flex; align-items: center; gap: 10px; text-decoration: none; color: var(--text-dark);" onclick="event.stopPropagation();">
+        <span class="menu-icon" style="font-size: 1.2rem;">😴</span>
+        <span>Sedation Dentistry</span>
+      </a>
+    </li>
+  </ul>
+</li>
+
+<style>
+  /* Ensure the entire wrapper is clickable */
+  .mobile-link-wrapper {
+    cursor: pointer;
+    user-select: none;
+  }
+  
+  /* Submenu initially hidden */
+  .mobile-submenu {
+    display: none !important;
+  }
+  
+  /* When active class is added, show submenu */
+  .mobile-submenu.active {
+    display: block !important;
+  }
+</style>
+
+<script>
+// Simple JavaScript for toggling
+function toggleMobileSubmenu(event) {
+  event.preventDefault();
+  event.stopPropagation();
+  
+  var submenu = document.getElementById('mobileSubmenu');
+  var toggleBtn = document.getElementById('coursesToggle');
+  var icon = toggleBtn ? toggleBtn.querySelector('span') : null;
+  
+  if (submenu) {
+    // Toggle active class
+    submenu.classList.toggle('active');
+    
+    // Update icon
+    if (icon) {
+      if (submenu.classList.contains('active')) {
+        icon.textContent = '−';
+      } else {
+        icon.textContent = '+';
+      }
+    }
+  }
+}
+
+// Initialize - ensure submenu starts hidden
+document.addEventListener('DOMContentLoaded', function() {
+  var submenu = document.getElementById('mobileSubmenu');
+  if (submenu) {
+    submenu.classList.remove('active');
+  }
+});
+</script>
+      <li class="mobile-nav-item">
+        <a href="blog.html" class="mobile-nav-link">Blog</a>
+      </li>
+      <li class="mobile-nav-item">
+        <a href="contactsep.html" class="mobile-nav-link">Contact Us</a>
+      </li>
+    </ul>
+  </div>
+  
+
+  <!-- Floating Settings Button - COLORFUL -->
+  <button class="floating-settings" id="themeToggleBtn">
+    <span class="color-dots">
+      <span style="background: #FF6B35;"></span>
+      <span style="background: #7AC943;"></span>
+      <span style="background: #FF1493;"></span>
+      <span style="background: #FFD700;"></span>
+    </span>
+  </button>
+
+  <!-- Theme Panel -->
+  <div class="theme-panel" id="themePanel">
+    <div class="theme-panel-header">
+      <h4>Themes</h4>
+      <button class="close-panel" id="closePanel">✕</button>
+    </div>
+    <div class="theme-options">
+      <div class="theme-option" data-theme="theme1">Royal Purple</div>
+      <div class="theme-option" data-theme="theme2">Ocean Teal</div>
+      <div class="theme-option" data-theme="theme3">Berry Pink</div>
+      <div class="theme-option" data-theme="theme4">Forest Green</div>
+      <div class="theme-option" data-theme="theme5">Sunset Orange</div>
+    </div>
+  </div>
+</section>
+
+
+
+<section class="hero-section" id="heroSection">
+  <!-- Background Image Layer with Overlay -->
+  <div class="hero-bg-layer">
+    <div class="hero-bg-image"></div>
+    <div class="hero-bg-overlay"></div>
+  </div>
+  
+  <!-- Soft floating shapes animation (subtle) -->
+  <div class="floating-shapes">
+    <div class="shape shape-1"></div>
+    <div class="shape shape-2"></div>
+    <div class="shape shape-3"></div>
+    <div class="shape shape-4"></div>
+  </div>
+
+  <div class="hero-container">
+    <!-- Left Side Content -->
+    <div class="hero-left">
+      <div class="hero-left-content glass-panel">
+        <h1 class="hero-heading">
+          Elevating Pediatric <span class="heading-highlight">Dental Excellence</span>
+        </h1>
+        <p class="hero-paragraph">
+          World-class pedodontic education with cutting-edge curriculum and hands-on clinical training. Transform your practice with our specialized courses designed for modern pediatric dentistry.
+        </p>
+        <div class="hero-buttons">
+          <button class="btn btn-primary" id="exploreBtn">Explore Courses</button>
+         <a href="https://wa.me/919789029012?text=hi%20i%20want%20to%20know%20more%20about%20your%20courses%20,i%20seen%20your%20website" target="_blank">
+  <button class="btn btn-outline" id="contactBtn">Talk to Advisor</button>
+</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Right Side - Premium Glossy Form Card -->
+    <div class="hero-right">
+      <div class="form-card">
+        <h3 class="form-title" style="color: black;">Get Course Details</h3>
+        <p class="form-subtitle" style="color: black;">We'll connect you within 24 hours</p>
+        
+        <form id="contactForm" class="premium-form">
+          <!-- Name Field -->
+          <div class="form-group">
+            <input type="text" id="name" class="form-input" placeholder=" " required>
+            <label for="name" class="form-label">Full Name</label>
+            <div class="input-glow"></div>
+          </div>
+
+          <!-- Phone Field -->
+          <div class="form-group">
+            <input type="tel" id="phone" class="form-input" placeholder=" " required>
+            <label for="phone" class="form-label">Phone Number</label>
+            <div class="input-glow"></div>
+          </div>
+
+          <!-- Email Field -->
+          <div class="form-group">
+            <input type="email" id="email" class="form-input" placeholder=" " required>
+            <label for="email" class="form-label">Email Address</label>
+            <div class="input-glow"></div>
+          </div>
+
+          <!-- Course Dropdown -->
+          <div class="form-group">
+            <select id="course" class="form-input form-select" required>
+              <option value="" disabled selected></option>
+              <option value="Pediatric Dentistry">Pediatric Dentistry</option>
+              <option value="Child Orthodontics">Child Orthodontics</option>
+              <option value="Pulp Therapy">Pulp Therapy</option>
+              <option value="Dental Radiology">Dental Radiology</option>
+              <option value="Preventive Dentistry">Preventive Dentistry</option>
+              <option value="Sedation Dentistry">Sedation Dentistry</option>
+            </select>
+            <label for="course" class="form-label">Select Course</label>
+            <div class="input-glow"></div>
+          </div>
+
+          <!-- Message Field -->
+          <div class="form-group">
+            <textarea id="message" class="form-input form-textarea" placeholder=" " rows="3"></textarea>
+            <label for="message" class="form-label">Your Message (Optional)</label>
+            <div class="input-glow"></div>
+          </div>
+
+          <button type="submit" class="btn btn-primary form-submit" id="submitBtn">
+            Send via WhatsApp
+            <span class="btn-icon">📱</span>
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+<section class="about-pedodontics-final">
+  <!-- Premium background elements -->
+  <div class="bg-orb primary-orb"></div>
+  <div class="bg-orb accent-orb"></div>
+  <div class="bg-pattern-grid"></div>
+  
+  <div class="container">
+    <!-- Section header -->
+    <div class="section-header">
+      <div class="header-badge">
+        <span class="badge-line"></span>
+        <span class="badge-text">Excellence in Pediatric Dentistry</span>
+        <span class="badge-line"></span>
+      </div>
+      <h2 class="section-title">About Practice <span class="title-highlight">Pedodontics</span></h2>
+      <p class="section-subtitle">Where compassionate care meets clinical mastery</p>
+    </div>
+    
+    <!-- Main content grid -->
+    <div class="about-final-grid">
+      <!-- Left: Fixed image showcase - 100% visible on all devices -->
+      <div class="image-showcase-final">
+        <!-- Main large image -->
+        <div class="showcase-main">
+          <div class="image-wrapper-final main-wrapper">
+            <img src="https://images.pexels.com/photos/5905493/pexels-photo-5905493.jpeg?auto=compress&cs=tinysrgb&w=800&h=1000&fit=crop" 
+                 alt="Pediatric dentist examining child" 
+                 class="showcase-img-final"
+                 loading="eager">
+            <div class="image-overlay-final"></div>
+          </div>
+        </div>
+        
+        <!-- Top right small image -->
+        <div class="showcase-top-right">
+          <div class="image-wrapper-final small-wrapper">
+            <img src="https://images.pexels.com/photos/8539951/pexels-photo-8539951.jpeg?auto=compress&cs=tinysrgb&w=600&h=800&fit=crop" 
+                 alt="Happy child at dentist" 
+                 class="showcase-img-final"
+                 loading="eager">
+          </div>
+        </div>
+        
+        <!-- Bottom right small image -->
+        <div class="showcase-bottom-right">
+          <div class="image-wrapper-final small-wrapper">
+            <img src="https://images.pexels.com/photos/7659566/pexels-photo-7659566.jpeg?auto=compress&cs=tinysrgb&w=600&h=800&fit=crop" 
+                 alt="Dental education" 
+                 class="showcase-img-final"
+                 loading="eager">
+          </div>
+        </div>
+        
+        <!-- Floating experience badge -->
+        <div class="floating-badge-final">
+          <div class="badge-content-final">
+            <span class="badge-years" style="color: black;">25+</span>
+            <span class="badge-label" style="color: black;">Years of Excellence</span>
+          </div>
+        </div>
+        
+        <!-- Decorative elements -->
+        <div class="decor-dot dot-purple"></div>
+        <div class="decor-dot dot-lime"></div>
+      </div>
+      
+      <!-- Right: Content -->
+      <div class="content-final">
+        <div class="content-card-final">
+          <!-- Premium badge -->
+          <div class="content-premium-badge">
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+              <path d="M10 0L13 7L20 8L15 13L16 20L10 16L4 20L5 13L0 8L7 7L10 0Z" fill="var(--accent)"/>
+            </svg>
+            <span>Leaders in pediatric dental education</span>
+          </div>
+          
+          <!-- Heading -->
+          <h3 class="content-heading-final">Shaping the future of <span class="accent-gradient">children's dentistry</span></h3>
+          
+          <!-- Optimized paragraph -->
+          <p class="content-paragraph-final">
+            Our <span class="text-highlight">advanced pediatric dental program</span> combines cutting-edge research with compassionate care. We prepare specialists through hands-on clinical training and evidence-based practices in a child-centered environment.
+          </p>
+          
+          <!-- Feature pills -->
+          <div class="feature-pills-final">
+            <div class="feature-pill-final">
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                <circle cx="8" cy="8" r="7" stroke="var(--accent)" stroke-width="1.5"/>
+                <path d="M5 8L7 10L11 6" stroke="var(--accent)" stroke-width="1.5" stroke-linecap="round"/>
+              </svg>
+              <span>Internationally recognized faculty</span>
+            </div>
+            <div class="feature-pill-final">
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                <circle cx="8" cy="8" r="7" stroke="var(--accent)" stroke-width="1.5"/>
+                <path d="M5 8L7 10L11 6" stroke="var(--accent)" stroke-width="1.5" stroke-linecap="round"/>
+              </svg>
+              <span>State-of-the-art simulation lab</span>
+            </div>
+            <div class="feature-pill-final">
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                <circle cx="8" cy="8" r="7" stroke="var(--accent)" stroke-width="1.5"/>
+                <path d="M5 8L7 10L11 6" stroke="var(--accent)" stroke-width="1.5" stroke-linecap="round"/>
+              </svg>
+              <span>100% clinical placement rate</span>
+            </div>
+          </div>
+          
+          <!-- Stats container - optimized for mobile -->
+          <div class="stats-final-container">
+            <div class="stat-final-item" data-target="25">
+              <div class="stat-final-number">
+                <span class="stat-final-value">0</span>
+                <span class="stat-final-suffix">+</span>
+              </div>
+              <div class="stat-final-label">Years of Excellence</div>
+              <div class="stat-final-progress">
+               
+              </div>
+            </div>
+            
+            <div class="stat-final-item" data-target="5000">
+              <div class="stat-final-number">
+                <span class="stat-final-value">0</span>
+                <span class="stat-final-suffix">+</span>
+              </div>
+              <div class="stat-final-label">Students Trained</div>
+              <div class="stat-final-progress">
+                <!-- <div class="progress-final-bar"></div> -->
+              </div>
+            </div>
+            
+            <div class="stat-final-item" data-target="40">
+              <div class="stat-final-number">
+                <span class="stat-final-value">0</span>
+                <span class="stat-final-suffix">+</span>
+              </div>
+              <div class="stat-final-label">Specialized Courses</div>
+              <div class="stat-final-progress">
+                <!-- <div class="progress-final-bar"></div> -->
+              </div>
+            </div>
+          </div>
+          
+          <!-- Testimonial -->
+          <div class="testimonial-final">
+            <svg width="28" height="28" viewBox="0 0 28 28" fill="none" class="quote-icon-final">
+              <path d="M9 14L6 19L11 19L14 14L14 9L9 9L9 14Z" fill="var(--accent)" fill-opacity="0.2"/>
+              <path d="M19 14L16 19L21 19L24 14L24 9L19 9L19 14Z" fill="var(--accent)" fill-opacity="0.2"/>
+            </svg>
+            <div class="quote-content-final">
+              <p>"The premier institution for pediatric dental education in the region"</p>
+              <span class="quote-author-final">— Dr. Sarah Mitchell, Alumni</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="courses-masterpiece" id="courses">
+  <!-- Premium ambient background -->
+  <div class="ambient-bg">
+    <div class="ambient-gradient"></div>
+    <div class="ambient-particles"></div>
+    <div class="ambient-grid"></div>
+  </div>
+  
+  <div class="container">
+    <!-- Section header with premium typography -->
+    <div class="section-header-master">
+      <div class="header-tag-wrapper">
+        <span class="header-tag">Academic Excellence</span>
+        <div class="tag-glow"></div>
+      </div>
+      <h2 class="section-title-master">
+        <span class="title-line">Explore Our</span>
+        <span class="title-gradient">Premium Courses</span>
+      </h2>
+      <p class="section-subtitle-master">
+        World-class pediatric dental education designed for the next generation of specialists
+      </p>
+      <div class="header-decoration">
+        <span class="deco-line"></span>
+        <span class="deco-dot"></span>
+        <span class="deco-line"></span>
+      </div>
+    </div>
+    
+    <!-- Master courses grid -->
+    <div class="courses-grid-master">
+      <!-- Course Card 1 - Premium -->
+      <div class="course-card-master" data-index="1">
+        <div class="card-inner">
+          <div class="card-media">
+            <div class="media-overlay"></div>
+            <img src="https://images.pexels.com/photos/3779718/pexels-photo-3779718.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&fit=crop" alt="Pediatric Dentistry Fundamentals" class="card-image-master" loading="lazy">
+            <div class="card-badge">
+              <span class="badge-text">Core</span>
+            </div>
+            <div class="card-rating">
+              <div class="stars">
+                <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+              </div>
+              <span class="rating-count">(124)</span>
+            </div>
+          </div>
+          
+          <div class="card-content-master">
+            <div class="content-header">
+              <h3 class="card-title-master">Pediatric Dentistry Fundamentals</h3>
+              <div class="title-underline"></div>
+            </div>
+            
+            <div class="card-meta">
+              <div class="meta-item">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
+                  <circle cx="12" cy="12" r="10" stroke="var(--accent)" stroke-width="2"/>
+                  <path d="M12 6V12L16 14" stroke="var(--accent)" stroke-width="2" stroke-linecap="round"/>
+                </svg>
+                <span>12 weeks</span>
+              </div>
+              <div class="meta-item">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
+                  <path d="M4 19L20 19" stroke="var(--accent)" stroke-width="2" stroke-linecap="round"/>
+                  <circle cx="12" cy="7" r="4" stroke="var(--accent)" stroke-width="2"/>
+                </svg>
+                <span>Expert faculty</span>
+              </div>
+              <div class="meta-item">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
+                  <path d="M12 2L15 9H22L16 14L19 21L12 16.5L5 21L8 14L2 9H9L12 2Z" stroke="var(--accent)" stroke-width="2"/>
+                </svg>
+                <span>4.9 rating</span>
+              </div>
+            </div>
+            
+            <p class="card-description-master">
+              Essential principles of child psychology, behavior guidance, and preventive care. Includes hands-on clinical simulation and case-based learning.
+            </p>
+            
+            <div class="card-features">
+              <div class="feature-item">
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                  <circle cx="8" cy="8" r="6" fill="var(--accent)" fill-opacity="0.2" stroke="var(--accent)" stroke-width="1.5"/>
+                  <path d="M5 8L7 10L11 6" stroke="var(--accent)" stroke-width="2" stroke-linecap="round"/>
+                </svg>
+                <span>8 live sessions</span>
+              </div>
+              <div class="feature-item">
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                  <circle cx="8" cy="8" r="6" fill="var(--accent)" fill-opacity="0.2" stroke="var(--accent)" stroke-width="1.5"/>
+                  <path d="M5 8L7 10L11 6" stroke="var(--accent)" stroke-width="2" stroke-linecap="round"/>
+                </svg>
+                <span>Clinical practicum</span>
+              </div>
+            </div>
+            
+            <div class="card-footer">
+              <div class="price-tag">
+                <span class="price-currency">$</span>
+                <span class="price-value">1,299</span>
+              </div>
+              <button class="course-btn-master" onclick="window.location.href='course1.html'">
+  <span>View Details</span>
+  <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
+    <path d="M5 12H19M19 12L15 8M19 12L15 16" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  </svg>
+</button>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Hover overlay elements -->
+        <div class="card-glow"></div>
+        <div class="card-shine"></div>
+        <div class="card-particles">
+          <span class="particle"></span>
+          <span class="particle"></span>
+          <span class="particle"></span>
+        </div>
+      </div>
+      
+      <!-- Course Card 2 -->
+      <div class="course-card-master" data-index="2">
+        <div class="card-inner">
+          <div class="card-media">
+            <div class="media-overlay"></div>
+            <img src="https://images.pexels.com/photos/3845641/pexels-photo-3845641.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&fit=crop" alt="Advanced Clinical Techniques" class="card-image-master" loading="lazy">
+            <div class="card-badge">
+              <span class="badge-text">Advanced</span>
+            </div>
+            <div class="card-rating">
+              <div class="stars">
+                <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+              </div>
+              <span class="rating-count">(98)</span>
+            </div>
+          </div>
+          
+          <div class="card-content-master">
+            <div class="content-header">
+              <h3 class="card-title-master">Advanced Clinical Techniques</h3>
+              <div class="title-underline"></div>
+            </div>
+            
+            <div class="card-meta">
+              <div class="meta-item">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
+                  <circle cx="12" cy="12" r="10" stroke="var(--accent)" stroke-width="2"/>
+                  <path d="M12 6V12L16 14" stroke="var(--accent)" stroke-width="2" stroke-linecap="round"/>
+                </svg>
+                <span>16 weeks</span>
+              </div>
+              <div class="meta-item">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
+                  <path d="M4 19L20 19" stroke="var(--accent)" stroke-width="2" stroke-linecap="round"/>
+                  <circle cx="12" cy="7" r="4" stroke="var(--accent)" stroke-width="2"/>
+                </svg>
+                <span>Master clinicians</span>
+              </div>
+              <div class="meta-item">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
+                  <path d="M12 2L15 9H22L16 14L19 21L12 16.5L5 21L8 14L2 9H9L12 2Z" stroke="var(--accent)" stroke-width="2"/>
+                </svg>
+                <span>5.0 rating</span>
+              </div>
+            </div>
+            
+            <p class="card-description-master">
+              Master complex restorative procedures, pulp therapy, and surgical interventions. Advanced simulation training with real-time feedback.
+            </p>
+            
+            <div class="card-features">
+              <div class="feature-item">
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                  <circle cx="8" cy="8" r="6" fill="var(--accent)" fill-opacity="0.2" stroke="var(--accent)" stroke-width="1.5"/>
+                  <path d="M5 8L7 10L11 6" stroke="var(--accent)" stroke-width="2" stroke-linecap="round"/>
+                </svg>
+                <span>20+ procedures</span>
+              </div>
+              <div class="feature-item">
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                  <circle cx="8" cy="8" r="6" fill="var(--accent)" fill-opacity="0.2" stroke="var(--accent)" stroke-width="1.5"/>
+                  <path d="M5 8L7 10L11 6" stroke="var(--accent)" stroke-width="2" stroke-linecap="round"/>
+                </svg>
+                <span>Certification</span>
+              </div>
+            </div>
+            
+            <div class="card-footer">
+              <div class="price-tag">
+                <span class="price-currency">$</span>
+                <span class="price-value">2,499</span>
+              </div>
+              <button class="course-btn-master" onclick="window.location.href='course2.html'">
+                <span>View Details</span>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
+                  <path d="M5 12H19M19 12L15 8M19 12L15 16" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </button>
+            </div>
+          </div>
+        </div>
+        
+        <div class="card-glow"></div>
+        <div class="card-shine"></div>
+        <div class="card-particles"></div>
+      </div>
+      
+      <!-- Course Card 3 -->
+      <div class="course-card-master" data-index="3">
+        <div class="card-inner">
+          <div class="card-media">
+            <div class="media-overlay"></div>
+            <img src="https://images.pexels.com/photos/7659566/pexels-photo-7659566.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&fit=crop" alt="Sedation & Pain Management" class="card-image-master" loading="lazy">
+            <div class="card-badge">
+              <span class="badge-text">Specialty</span>
+            </div>
+            <div class="card-rating">
+              <div class="stars">
+                <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+              </div>
+              <span class="rating-count">(87)</span>
+            </div>
+          </div>
+          
+          <div class="card-content-master">
+            <div class="content-header">
+              <h3 class="card-title-master">Sedation & Pain Management</h3>
+              <div class="title-underline"></div>
+            </div>
+            
+            <div class="card-meta">
+              <div class="meta-item">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
+                  <circle cx="12" cy="12" r="10" stroke="var(--accent)" stroke-width="2"/>
+                  <path d="M12 6V12L16 14" stroke="var(--accent)" stroke-width="2" stroke-linecap="round"/>
+                </svg>
+                <span>10 weeks</span>
+              </div>
+              <div class="meta-item">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
+                  <path d="M4 19L20 19" stroke="var(--accent)" stroke-width="2" stroke-linecap="round"/>
+                  <circle cx="12" cy="7" r="4" stroke="var(--accent)" stroke-width="2"/>
+                </svg>
+                <span>Anesthesiologists</span>
+              </div>
+              <div class="meta-item">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
+                  <path d="M12 2L15 9H22L16 14L19 21L12 16.5L5 21L8 14L2 9H9L12 2Z" stroke="var(--accent)" stroke-width="2"/>
+                </svg>
+                <span>4.8 rating</span>
+              </div>
+            </div>
+            
+            <p class="card-description-master">
+              Comprehensive training in pharmacological and non-pharmacological anxiety control. Includes hands-on sedation protocols and emergency management.
+            </p>
+            
+            <div class="card-features">
+              <div class="feature-item">
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                  <circle cx="8" cy="8" r="6" fill="var(--accent)" fill-opacity="0.2" stroke="var(--accent)" stroke-width="1.5"/>
+                  <path d="M5 8L7 10L11 6" stroke="var(--accent)" stroke-width="2" stroke-linecap="round"/>
+                </svg>
+                <span>PALS certified</span>
+              </div>
+              <div class="feature-item">
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                  <circle cx="8" cy="8" r="6" fill="var(--accent)" fill-opacity="0.2" stroke="var(--accent)" stroke-width="1.5"/>
+                  <path d="M5 8L7 10L11 6" stroke="var(--accent)" stroke-width="2" stroke-linecap="round"/>
+                </svg>
+                <span>Simulation lab</span>
+              </div>
+            </div>
+            
+            <div class="card-footer">
+              <div class="price-tag">
+                <span class="price-currency">$</span>
+                <span class="price-value">1,899</span>
+              </div>
+              <button class="course-btn-master" onclick="window.location.href='course3.html'">
+                <span>View Details</span>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
+                  <path d="M5 12H19M19 12L15 8M19 12L15 16" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </button>
+            </div>
+          </div>
+        </div>
+        
+        <div class="card-glow"></div>
+        <div class="card-shine"></div>
+        <div class="card-particles"></div>
+      </div>
+      
+      <!-- Course Card 4 -->
+      <div class="course-card-master" data-index="4">
+        <div class="card-inner">
+          <div class="card-media">
+            <div class="media-overlay"></div>
+            <img src="https://images.pexels.com/photos/7659558/pexels-photo-7659558.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&fit=crop" alt="Orthodontics for Children" class="card-image-master" loading="lazy">
+            <div class="card-badge">
+              <span class="badge-text">Specialty</span>
+            </div>
+            <div class="card-rating">
+              <div class="stars">
+                <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+              </div>
+              <span class="rating-count">(112)</span>
+            </div>
+          </div>
+          
+          <div class="card-content-master">
+            <div class="content-header">
+              <h3 class="card-title-master">Orthodontics for Children</h3>
+              <div class="title-underline"></div>
+            </div>
+            
+            <div class="card-meta">
+              <div class="meta-item">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
+                  <circle cx="12" cy="12" r="10" stroke="var(--accent)" stroke-width="2"/>
+                  <path d="M12 6V12L16 14" stroke="var(--accent)" stroke-width="2" stroke-linecap="round"/>
+                </svg>
+                <span>14 weeks</span>
+              </div>
+              <div class="meta-item">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
+                  <path d="M4 19L20 19" stroke="var(--accent)" stroke-width="2" stroke-linecap="round"/>
+                  <circle cx="12" cy="7" r="4" stroke="var(--accent)" stroke-width="2"/>
+                </svg>
+                <span>Orthodontists</span>
+              </div>
+              <div class="meta-item">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
+                  <path d="M12 2L15 9H22L16 14L19 21L12 16.5L5 21L8 14L2 9H9L12 2Z" stroke="var(--accent)" stroke-width="2"/>
+                </svg>
+                <span>4.9 rating</span>
+              </div>
+            </div>
+            
+            <p class="card-description-master">
+              Early intervention techniques, growth guidance, and interceptive orthodontic treatments. Digital treatment planning and appliance design.
+            </p>
+            
+            <div class="card-features">
+              <div class="feature-item">
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                  <circle cx="8" cy="8" r="6" fill="var(--accent)" fill-opacity="0.2" stroke="var(--accent)" stroke-width="1.5"/>
+                  <path d="M5 8L7 10L11 6" stroke="var(--accent)" stroke-width="2" stroke-linecap="round"/>
+                </svg>
+                <span>Digital workflow</span>
+              </div>
+              <div class="feature-item">
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                  <circle cx="8" cy="8" r="6" fill="var(--accent)" fill-opacity="0.2" stroke="var(--accent)" stroke-width="1.5"/>
+                  <path d="M5 8L7 10L11 6" stroke="var(--accent)" stroke-width="2" stroke-linecap="round"/>
+                </svg>
+                <span>Case studies</span>
+              </div>
+            </div>
+            
+            <div class="card-footer">
+              <div class="price-tag">
+                <span class="price-currency">$</span>
+                <span class="price-value">2,199</span>
+              </div>
+              <button class="course-btn-master" onclick="window.location.href='course4.html'">
+                <span>View Details</span>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
+                  <path d="M5 12H19M19 12L15 8M19 12L15 16" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </button>
+            </div>
+          </div>
+        </div>
+        
+        <div class="card-glow"></div>
+        <div class="card-shine"></div>
+        <div class="card-particles"></div>
+      </div>
+      
+      <!-- Course Card 5 -->
+      <div class="course-card-master" data-index="5">
+        <div class="card-inner">
+          <div class="card-media">
+            <div class="media-overlay"></div>
+            <img src="https://images.pexels.com/photos/8539951/pexels-photo-8539951.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&fit=crop" alt="Special Needs Dentistry" class="card-image-master" loading="lazy">
+            <div class="card-badge">
+              <span class="badge-text">Advanced</span>
+            </div>
+            <div class="card-rating">
+              <div class="stars">
+                <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+              </div>
+              <span class="rating-count">(76)</span>
+            </div>
+          </div>
+          
+          <div class="card-content-master">
+            <div class="content-header">
+              <h3 class="card-title-master">Special Needs Dentistry</h3>
+              <div class="title-underline"></div>
+            </div>
+            
+            <div class="card-meta">
+              <div class="meta-item">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
+                  <circle cx="12" cy="12" r="10" stroke="var(--accent)" stroke-width="2"/>
+                  <path d="M12 6V12L16 14" stroke="var(--accent)" stroke-width="2" stroke-linecap="round"/>
+                </svg>
+                <span>12 weeks</span>
+              </div>
+              <div class="meta-item">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
+                  <path d="M4 19L20 19" stroke="var(--accent)" stroke-width="2" stroke-linecap="round"/>
+                  <circle cx="12" cy="7" r="4" stroke="var(--accent)" stroke-width="2"/>
+                </svg>
+                <span>Special care team</span>
+              </div>
+              <div class="meta-item">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
+                  <path d="M12 2L15 9H22L16 14L19 21L12 16.5L5 21L8 14L2 9H9L12 2Z" stroke="var(--accent)" stroke-width="2"/>
+                </svg>
+                <span>4.8 rating</span>
+              </div>
+            </div>
+            
+            <p class="card-description-master">
+              Adaptive techniques for children with developmental, physical, and medical complexities. Comprehensive care strategies and family support.
+            </p>
+            
+            <div class="card-features">
+              <div class="feature-item">
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                  <circle cx="8" cy="8" r="6" fill="var(--accent)" fill-opacity="0.2" stroke="var(--accent)" stroke-width="1.5"/>
+                  <path d="M5 8L7 10L11 6" stroke="var(--accent)" stroke-width="2" stroke-linecap="round"/>
+                </svg>
+                <span>Multidisciplinary</span>
+              </div>
+              <div class="feature-item">
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                  <circle cx="8" cy="8" r="6" fill="var(--accent)" fill-opacity="0.2" stroke="var(--accent)" stroke-width="1.5"/>
+                  <path d="M5 8L7 10L11 6" stroke="var(--accent)" stroke-width="2" stroke-linecap="round"/>
+                </svg>
+                <span>Clinical rotations</span>
+              </div>
+            </div>
+            
+            <div class="card-footer">
+              <div class="price-tag">
+                <span class="price-currency">$</span>
+                <span class="price-value">1,699</span>
+              </div>
+              <button class="course-btn-master" onclick="window.location.href='course1.html'">
+                <span>View Details</span>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
+                  <path d="M5 12H19M19 12L15 8M19 12L15 16" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </button>
+            </div>
+          </div>
+        </div>
+        
+        <div class="card-glow"></div>
+        <div class="card-shine"></div>
+        <div class="card-particles"></div>
+      </div>
+      
+      <!-- Course Card 6 -->
+      <div class="course-card-master" data-index="6">
+        <div class="card-inner">
+          <div class="card-media">
+            <div class="media-overlay"></div>
+            <img src="https://images.pexels.com/photos/3779709/pexels-photo-3779709.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&fit=crop" alt="Pediatric Dental Research" class="card-image-master" loading="lazy">
+            <div class="card-badge">
+              <span class="badge-text">Research</span>
+            </div>
+            <div class="card-rating">
+              <div class="stars">
+                <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+              </div>
+              <span class="rating-count">(63)</span>
+            </div>
+          </div>
+          
+          <div class="card-content-master">
+            <div class="content-header">
+              <h3 class="card-title-master">Pediatric Dental Research</h3>
+              <div class="title-underline"></div>
+            </div>
+            
+            <div class="card-meta">
+              <div class="meta-item">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
+                  <circle cx="12" cy="12" r="10" stroke="var(--accent)" stroke-width="2"/>
+                  <path d="M12 6V12L16 14" stroke="var(--accent)" stroke-width="2" stroke-linecap="round"/>
+                </svg>
+                <span>20 weeks</span>
+              </div>
+              <div class="meta-item">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
+                  <path d="M4 19L20 19" stroke="var(--accent)" stroke-width="2" stroke-linecap="round"/>
+                  <circle cx="12" cy="7" r="4" stroke="var(--accent)" stroke-width="2"/>
+                </svg>
+                <span>Research faculty</span>
+              </div>
+              <div class="meta-item">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
+                  <path d="M12 2L15 9H22L16 14L19 21L12 16.5L5 21L8 14L2 9H9L12 2Z" stroke="var(--accent)" stroke-width="2"/>
+                </svg>
+                <span>5.0 rating</span>
+              </div>
+            </div>
+            
+            <p class="card-description-master">
+              Evidence-based methodology, literature review, and clinical research implementation. Publish your findings in peer-reviewed journals.
+            </p>
+            
+            <div class="card-features">
+              <div class="feature-item">
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                  <circle cx="8" cy="8" r="6" fill="var(--accent)" fill-opacity="0.2" stroke="var(--accent)" stroke-width="1.5"/>
+                  <path d="M5 8L7 10L11 6" stroke="var(--accent)" stroke-width="2" stroke-linecap="round"/>
+                </svg>
+                <span>IRB training</span>
+              </div>
+              <div class="feature-item">
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                  <circle cx="8" cy="8" r="6" fill="var(--accent)" fill-opacity="0.2" stroke="var(--accent)" stroke-width="1.5"/>
+                  <path d="M5 8L7 10L11 6" stroke="var(--accent)" stroke-width="2" stroke-linecap="round"/>
+                </svg>
+                <span>Data analysis</span>
+              </div>
+            </div>
+            
+            <div class="card-footer">
+              <div class="price-tag">
+                <span class="price-currency">$</span>
+                <span class="price-value">2,899</span>
+              </div>
+              <button class="course-btn-master" onclick="window.location.href='course1.html'">
+                <span>View Details</span>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
+                  <path d="M5 12H19M19 12L15 8M19 12L15 16" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </button>
+            </div>
+          </div>
+        </div>
+        
+        <div class="card-glow"></div>
+        <div class="card-shine"></div>
+        <div class="card-particles"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="instagram-spacious">
+  <!-- Purple background with subtle pattern -->
+  <div class="spacious-bg-pattern"></div>
+  
+  <div class="spacious-container">
+    <!-- Top: Text Content -->
+    <div class="spacious-text-content">
+      <h2 class="spacious-heading">Follow Us on Instagram</h2>
+      <div class="spacious-accent-line"></div>
+      <p class="spacious-subtext">Join our community of pediatric dental professionals</p>
+    </div>
+    
+    <!-- Bottom: Full Width Embed Container -->
+    <div class="spacious-embed-wrapper">
+      <div class="spacious-embed-container">
+        <!-- Instagram embed code goes here - will occupy full width -->
+        <div class="elfsight-app-8f3eba95-0446-4f7c-9e9a-4386f21ac64d" data-elfsight-app-lazy></div>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Load Elfsight platform script -->
+  <script src="https://elfsightcdn.com/platform.js" async></script>
+</section>
+
+
+
+<section class="contact-connect">
+  <!-- Decorative background elements -->
+  <div class="connect-bg-orb orb-purple"></div>
+  <div class="connect-bg-orb orb-lime"></div>
+  
+  <div class="connect-wrapper">
+    <!-- Section Header -->
+    <div class="connect-header">
+      <h2 class="connect-heading">Get in Touch</h2>
+      <p class="connect-subheading">We're here to answer all your questions</p>
+      <div class="connect-accent-line"></div>
+    </div>
+    
+    <div class="connect-layout">
+      <!-- Left: Contact Information -->
+      <div class="connect-info-panel">
+        <div class="info-panel-card">
+          <h3 class="panel-title">Contact Information</h3>
+          <p class="panel-desc">Reach out to us anytime. Our team is ready to assist you.</p>
+          
+          <!-- Address -->
+          <div class="panel-item">
+            <div class="item-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z" fill="currentColor"/>
+              </svg>
+            </div>
+            <div class="item-detail">
+              <span class="detail-label">Address</span>
+              <span class="detail-value">123 Pediatric Dental Way, Suite 100, Medical City, MC 12345</span>
+            </div>
+          </div>
+          
+          <!-- Phone -->
+          <div class="panel-item">
+            <div class="item-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M20 15.5c-1.25 0-2.45-.2-3.57-.57-.35-.11-.74-.03-1.02.24l-2.2 2.2c-2.83-1.44-5.15-3.75-6.59-6.59l2.2-2.21c.28-.27.36-.66.25-1.01C8.7 6.45 8.5 5.25 8.5 4c0-.55-.45-1-1-1H4c-.55 0-1 .45-1 1 0 9.39 7.61 17 17 17 .55 0 1-.45 1-1v-3.5c0-.55-.45-1-1-1z" fill="currentColor"/>
+              </svg>
+            </div>
+            <div class="item-detail">
+              <span class="detail-label">Phone</span>
+              <span class="detail-value">+1 (555) 123-4567</span>
+            </div>
+          </div>
+          
+          <!-- Email -->
+          <div class="panel-item">
+            <div class="item-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z" fill="currentColor"/>
+              </svg>
+            </div>
+            <div class="item-detail">
+              <span class="detail-label">Email</span>
+              <span class="detail-value">info@pedodonticpractice.com</span>
+            </div>
+          </div>
+          
+          <!-- Business Hours -->
+          <div class="panel-hours">
+            <div class="hours-icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2"/>
+                <path d="M12 6V12L16 14" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+              </svg>
+            </div>
+            <div class="hours-text">
+              <span>Mon - Fri: 9:00 AM - 6:00 PM</span>
+              <span>Sat: 9:00 AM - 2:00 PM</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Right: Contact Form -->
+      <div class="connect-form-panel">
+        <div class="form-panel-card">
+          <h3 class="form-panel-heading">Send us a Message</h3>
+          <p class="form-panel-desc">We'll get back to you within 24 hours</p>
+          
+          <form class="connect-form" id="connectForm" action="#" method="post">
+            <div class="form-row">
+              <label for="fullName" class="row-label">Full Name</label>
+             <input 
+  type="text" 
+  id="fullName" 
+  name="fullName" 
+  class="row-input" 
+  placeholder="Dr. John Smith" 
+  required
+  oninput="validateName()"
+>
+
+<span id="nameError" style="color: red; font-size: 14px; display: none;">
+  Enter only alphabets
+</span>
+
+              <div class="row-error" id="fullNameError"></div>
+            </div>
+            
+            <div class="form-row">
+              <label for="emailAddress" class="row-label">Email Address</label>
+              <input type="email" id="emailAddress" name="emailAddress" class="row-input" placeholder="john@example.com" required>
+              <div class="row-error" id="emailAddressError"></div>
+            </div>
+            
+            <div class="form-row">
+              <label for="mobileNumber" class="row-label">Phone Number</label>
+              <input type="tel" id="mobileNumber" name="mobileNumber" class="row-input" placeholder="9876543210" maxlength="10" required>
+              <div class="row-error" id="mobileNumberError"></div>
+            </div>
+            
+            <div class="form-row">
+              <label for="yourMessage" class="row-label">Message</label>
+              <textarea id="yourMessage" name="yourMessage" class="row-textarea" rows="4" placeholder="How can we help you?" required></textarea>
+              <div class="row-error" id="yourMessageError"></div>
+            </div>
+            
+            <button type="submit" class="form-submit-action" id="connectSubmitBtn">
+              <span>Send Message</span>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
+                <path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </button>
+          </form>
+          
+          <div class="form-success-message" id="connectSuccessMsg">
+            <svg width="40" height="40" viewBox="0 0 24 24" fill="none">
+              <circle cx="12" cy="12" r="10" fill="var(--accent)" stroke="var(--accent)" stroke-width="2"/>
+              <path d="M8 12L11 15L16 9" stroke="white" stroke-width="2" stroke-linecap="round"/>
+            </svg>
+            <p>Thank you! Your message has been sent successfully.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="footer-premium">
+  <!-- Main Footer -->
+  <div class="footer-main">
+    <div class="footer-container">
+      <div class="footer-grid">
+        <!-- Column 1: Logo & Brand -->
+        <div class="footer-col brand-col">
+          <div class="footer-logo-wrapper">
+            <div class="footer-logo-icon">
+              <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="20" cy="20" r="18" fill="var(--accent)" stroke="white" stroke-width="2"/>
+                <path d="M12 20L17 25L28 14" stroke="white" stroke-width="3" stroke-linecap="round"/>
+              </svg>
+            </div>
+            <span class="footer-logo-text">Pedodontic<span class="logo-accent">Practice</span></span>
+          </div>
+          <p class="footer-brand-desc">Providing excellence in pediatric dental education and care for the next generation of specialists.</p>
+          <div class="footer-social">
+            <a href="#" class="social-link" aria-label="Facebook">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3V2z" fill="currentColor"/>
+              </svg>
+            </a>
+            <a href="#" class="social-link" aria-label="Instagram">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                <rect x="2" y="2" width="20" height="20" rx="5" stroke="currentColor" stroke-width="2"/>
+                <circle cx="12" cy="12" r="3" stroke="currentColor" stroke-width="2"/>
+                <circle cx="18" cy="6" r="1.5" fill="currentColor"/>
+              </svg>
+            </a>
+            <a href="#" class="social-link" aria-label="Twitter">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                <path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z" fill="currentColor"/>
+              </svg>
+            </a>
+            <a href="#" class="social-link" aria-label="LinkedIn">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" fill="currentColor"/>
+                <rect x="2" y="9" width="4" height="12" fill="currentColor"/>
+                <circle cx="4" cy="4" r="2" fill="currentColor"/>
+              </svg>
+            </a>
+          </div>
+        </div>
+        
+        <!-- Column 2: Quick Links -->
+        <div class="footer-col">
+          <h3 class="footer-heading">Quick Links</h3>
+          <ul class="footer-links">
+            <li><a href="#" class="footer-link">Home</a></li>
+            <li><a href="#" class="footer-link">About Us</a></li>
+            <li><a href="#" class="footer-link">Why Choose Us</a></li>
+            <li><a href="#" class="footer-link">Faculty</a></li>
+            <li><a href="#" class="footer-link">Contact</a></li>
+          </ul>
+        </div>
+        
+        <!-- Column 3: Courses Links -->
+        <div class="footer-col">
+          <h3 class="footer-heading">Our Courses</h3>
+          <ul class="footer-links">
+            <li><a href="#" class="footer-link">Pediatric Fundamentals</a></li>
+            <li><a href="#" class="footer-link">Advanced Techniques</a></li>
+            <li><a href="#" class="footer-link">Sedation Management</a></li>
+            <li><a href="#" class="footer-link">Orthodontics for Children</a></li>
+            <li><a href="#" class="footer-link">Special Needs Dentistry</a></li>
+          </ul>
+        </div>
+        
+        <!-- Column 4: Contact Info -->
+        <div class="footer-col">
+          <h3 class="footer-heading">Get in Touch</h3>
+          <ul class="footer-contact">
+            <li class="contact-item">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
+                <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z" stroke="currentColor" stroke-width="2"/>
+                <circle cx="12" cy="9" r="2.5" stroke="currentColor" stroke-width="2"/>
+              </svg>
+              <span>123 Pediatric Way, Medical City</span>
+            </li>
+            <li class="contact-item">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
+                <path d="M22 16.92v3a1.999 1.999 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.362 1.903.7 2.81a2 2 0 0 1-.45 2.11L8 10a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.338 1.85.573 2.81.7A2 2 0 0 1 22 16.92z" stroke="currentColor" stroke-width="2"/>
+              </svg>
+              <span>+1 (555) 123-4567</span>
+            </li>
+            <li class="contact-item">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
+                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" stroke="currentColor" stroke-width="2"/>
+                <polyline points="22,6 12,13 2,6" stroke="currentColor" stroke-width="2"/>
+              </svg>
+              <span>info@pedodontic.com</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Footer Bottom -->
+  <div class="footer-bottom">
+    <div class="footer-container">
+      <div class="footer-bottom-content">
+        <p class="copyright">© 2024 Pedodontic Practice. All rights reserved.</p>
+        <div class="footer-bottom-links">
+          <a href="#" class="bottom-link">Privacy Policy</a>
+          <span class="bottom-sep">|</span>
+          <a href="#" class="bottom-link">Terms of Use</a>
+          <span class="bottom-sep">|</span>
+          <a href="#" class="bottom-link">Cookie Policy</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+</body>
+<script src="script.js"></script>
+<script src="hero.js"></script>
+<script src="about.js"></script>
+<script src="courses.js"></script>
+<script src="insta.js"></script>
+<script src="homecontact.js"></script>
+
+
+<script>
+  window.addEventListener('scroll', function() {
+  const nav = document.querySelector('.navbar');
+  
+  // If user scrolls more than 50px, add 'scrolled' class
+  if (window.scrollY > 50) {
+    nav.classList.add('scrolled');
+  } else {
+    nav.classList.remove('scrolled');
+  }
+});
+</script>
+
+<script>
+  // ===== COMPLETE MOBILE NAVIGATION FIX =====
+(function() {
+  'use strict';
+  
+  // FIX 1: Ensure all mobile links have correct hrefs
+  function fixMobileLinks() {
+    const mobileLinks = [
+      { selector: 'a[href="index.html"]', text: 'Home', correct: 'index.html' },
+      { selector: 'a[href="about.html"]', text: 'About Us', correct: 'about.html' },
+      { selector: 'a[href="blog.html"]', text: 'Blog', correct: 'blog.html' },
+      { selector: 'a[href="contactsep.html"]', text: 'Contact Us', correct: 'contactsep.html' }
+    ];
+    
+    // Fix by selector first
+    mobileLinks.forEach(item => {
+      const links = document.querySelectorAll(item.selector);
+      links.forEach(link => {
+        link.setAttribute('href', item.correct);
+        console.log(`Fixed ${item.text} link: ${item.correct}`);
+      });
+    });
+    
+    // Fix by text content
+    document.querySelectorAll('.mobile-nav-link').forEach(link => {
+      const text = link.textContent.trim();
+      if (text === 'Home') link.setAttribute('href', 'index.html');
+      else if (text === 'About Us') link.setAttribute('href', 'about.html');
+      else if (text === 'Blog') link.setAttribute('href', 'blog.html');
+      else if (text === 'Contact Us') link.setAttribute('href', 'contactsep.html');
+    });
+    
+    // Fix submenu course links
+    const courseLinks = [
+      { selector: 'a[href="course1.html"]', correct: 'course1.html' },
+      { selector: 'a[href="course2.html"]', correct: 'course2.html' },
+      { selector: 'a[href="course3.html"]', correct: 'course3.html' },
+      { selector: 'a[href="course4.html"]', correct: 'course4.html' },
+      { selector: 'a[href="course5.html"]', correct: 'course5.html' },
+      { selector: 'a[href="course6.html"]', correct: 'course6.html' }
+    ];
+    
+    courseLinks.forEach(item => {
+      const links = document.querySelectorAll(item.selector);
+      links.forEach(link => {
+        link.setAttribute('href', item.correct);
+      });
+    });
+  }
+  
+  // FIX 2: Direct click handler that forces navigation
+  function setupNavigation() {
+    // Remove all existing click handlers by cloning
+    const allLinks = document.querySelectorAll('.mobile-nav-link, .mobile-submenu a');
+    
+    allLinks.forEach(link => {
+      // Store href before cloning
+      const href = link.getAttribute('href');
+      
+      // Create new link
+      const newLink = document.createElement('a');
+      newLink.className = link.className;
+      newLink.setAttribute('href', href || '#');
+      newLink.innerHTML = link.innerHTML;
+      
+      // Replace old link
+      link.parentNode.replaceChild(newLink, link);
+    });
+    
+    // Add fresh click handler to all links
+    document.querySelectorAll('.mobile-nav-link, .mobile-submenu a').forEach(link => {
+      link.addEventListener('click', function(e) {
+        const href = this.getAttribute('href');
+        
+        if (href && href !== '#' && href !== '') {
+          e.preventDefault(); // Stop any other handlers
+          window.location.href = href; // Force navigation
+          console.log('Navigating to:', href);
+          return false;
+        }
+      });
+    });
+  }
+  
+  // FIX 3: Submenu toggle fix
+  function fixSubmenuToggle() {
+    const toggleBtn = document.getElementById('coursesToggle');
+    const submenu = document.getElementById('mobileSubmenu');
+    const coursesLink = document.querySelector('.mobile-link-wrapper .mobile-nav-link');
+    
+    if (toggleBtn && submenu) {
+      // Remove existing handlers
+      const newToggle = toggleBtn.cloneNode(true);
+      toggleBtn.parentNode.replaceChild(newToggle, toggleBtn);
+      
+      // Add new handler
+      newToggle.addEventListener('click', function(e) {
+        e.preventDefault();
+        e.stopPropagation();
+        
+        const icon = this.querySelector('span');
+        submenu.classList.toggle('active');
+        
+        if (submenu.classList.contains('active')) {
+          icon.textContent = '−';
+          submenu.style.display = 'block';
+        } else {
+          icon.textContent = '+';
+          submenu.style.display = 'none';
+        }
+      });
+    }
+    
+    // Fix courses parent link - should not navigate, just open submenu
+    if (coursesLink) {
+      coursesLink.addEventListener('click', function(e) {
+        e.preventDefault();
+        // Optionally toggle submenu here too
+        if (toggleBtn) toggleBtn.click();
+      });
+    }
+  }
+  
+  // FIX 4: Mobile menu close button fix
+  function fixMobileMenuControls() {
+    const closeBtn = document.getElementById('mobileClose');
+    const overlay = document.getElementById('mobileOverlay');
+    const mobileMenu = document.getElementById('mobileMenu');
+    const menuToggle = document.querySelector('.menu-toggle'); // Assuming you have a menu toggle button
+    
+    if (closeBtn) {
+      const newClose = closeBtn.cloneNode(true);
+      closeBtn.parentNode.replaceChild(newClose, closeBtn);
+      
+      newClose.addEventListener('click', function() {
+        if (mobileMenu) mobileMenu.classList.remove('active');
+        if (overlay) overlay.classList.remove('active');
+        document.body.style.overflow = '';
+      });
+    }
+    
+    if (overlay) {
+      const newOverlay = overlay.cloneNode(true);
+      overlay.parentNode.replaceChild(newOverlay, overlay);
+      
+      newOverlay.addEventListener('click', function() {
+        if (mobileMenu) mobileMenu.classList.remove('active');
+        this.classList.remove('active');
+        document.body.style.overflow = '';
+      });
+    }
+    
+    if (menuToggle) {
+      const newToggle = menuToggle.cloneNode(true);
+      menuToggle.parentNode.replaceChild(newToggle, menuToggle);
+      
+      newToggle.addEventListener('click', function() {
+        if (mobileMenu) mobileMenu.classList.add('active');
+        if (overlay) overlay.classList.add('active');
+        document.body.style.overflow = 'hidden';
+      });
+    }
+  }
+  
+  // FIX 5: CSS fixes
+  function addCSSFixes() {
+    const style = document.createElement('style');
+    style.textContent = `
+      .mobile-nav-link, .mobile-submenu a {
+        cursor: pointer !important;
+        pointer-events: auto !important;
+        z-index: 10000 !important;
+        position: relative;
+      }
+      
+      .mobile-menu {
+        z-index: 9999;
+      }
+      
+      .mobile-submenu {
+        display: none;
+        padding-left: 20px;
+      }
+      
+      .mobile-submenu.active {
+        display: block;
+      }
+      
+      .mobile-link-wrapper {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+      }
+      
+      .submenu-toggle {
+        background: none;
+        border: 1px solid var(--primary);
+        border-radius: 50%;
+        width: 32px;
+        height: 32px;
+        cursor: pointer;
+        color: var(--primary);
+        font-size: 1.2rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      
+      .submenu-toggle:hover {
+        background: var(--accent);
+        color: white;
+        border-color: var(--accent);
+      }
+      
+      .mobile-overlay.active {
+        display: block;
+      }
+    `;
+    document.head.appendChild(style);
+  }
+  
+  // Initialize all fixes
+  function init() {
+    fixMobileLinks();
+    setupNavigation();
+    fixSubmenuToggle();
+    fixMobileMenuControls();
+    addCSSFixes();
+    
+    console.log('Mobile navigation fixed!');
+  }
+  
+  // Run after DOM is ready
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', init);
+  } else {
+    init();
+  }
+  
+})();
+</script>
+</html>

@@ -1,0 +1,1157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+   
+ 
+    <link rel="stylesheet" href="csss/style.css">
+    <link rel="stylesheet" href="homecontact.css">
+   
+    <link rel="stylesheet" href="footer.css">
+    <link rel="stylesheet" href="course2.css">
+</head>
+<body>
+
+<section class="navbar-section" id="navbar-section">
+  <!-- Sticky glassmorphism navbar -->
+  <nav class="navbar" id="mainNavbar">
+    <div class="nav-container">
+      <!-- Logo with INLINE CSS for EXTRA BIG SIZE + Practice Pedodontics text (right side of logo) -->
+      <div class="nav-logo">
+        <img src="logopp.jpeg" alt="PediaCare" class="logo-img" style="height: 70px; width: auto; max-width: 320px; object-fit: contain; display: block;">
+        <span class="logo-fallback" style="display: none;">PediaCare</span>
+        <!-- Practice Pedodontics text - RIGHT SIDE OF LOGO -->
+        <div class="practice-text" style="margin-left: 20px; font-size: 1.5rem; font-weight: 600; color: var(--primary); letter-spacing: 0.5px; border-left: 3px solid var(--accent); padding-left: 20px; line-height: 1.3;">
+          Practice<br>Pedodontics
+        </div>
+      </div>
+
+      <!-- Desktop Navigation -->
+      <ul class="nav-menu" id="navMenu">
+        <li class="nav-item">
+          <a href="index.html" class="nav-link active">Home</a>
+        </li>
+        <li class="nav-item">
+          <a href="about.html" class="nav-link">About Us</a>
+        </li>
+        <li class="nav-item dropdown-trigger">
+          <a href="index.html#courses" class="nav-link">
+            Courses
+            <svg class="dropdown-icon" width="16" height="16" viewBox="0 0 16 16" fill="none">
+              <path d="M4 6L8 10L12 6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+            </svg>
+          </a>
+          <!-- Mega Menu - PEDODONTICS COURSES -->
+         <div class="mega-menu">
+  <div class="mega-menu-container">
+    <div class="mega-column">
+      <a href="course1.html">
+        <div class="course-card">
+          <div class="course-icon">🦷</div>
+          <div class="course-content">
+            <h4>Pediatric Dentistry</h4>
+            <p>Primary teeth care & treatment</p>
+          </div>
+        </div>
+      </a>
+      
+      <a href="course2.html">
+        <div class="course-card">
+          <div class="course-icon">😁</div>
+          <div class="course-content">
+            <h4>Child Orthodontics</h4>
+            <p>Early intervention & braces</p>
+          </div>
+        </div>
+      </a>
+      
+      <a href="course3.html">
+        <div class="course-card">
+          <div class="course-icon">🦷</div>
+          <div class="course-content">
+            <h4>Pulp Therapy</h4>
+            <p>Pediatric root canals</p>
+          </div>
+        </div>
+      </a>
+    </div>
+    
+    <div class="mega-column">
+      <a href="course4.html">
+        <div class="course-card">
+          <div class="course-icon">🔬</div>
+          <div class="course-content">
+            <h4>Dental Radiology</h4>
+            <p>Pediatric imaging techniques</p>
+          </div>
+        </div>
+      </a>
+      
+      <a href="course5.html">
+        <div class="course-card">
+          <div class="course-icon">🦷</div>
+          <div class="course-content">
+            <h4>Preventive Dentistry</h4>
+            <p>Fluoride & sealants</p>
+          </div>
+        </div>
+      </a>
+      
+      <a href="course6.html">
+        <div class="course-card">
+          <div class="course-icon">😴</div>
+          <div class="course-content">
+            <h4>Sedation Dentistry</h4>
+            <p>Pediatric behavior management</p>
+          </div>
+        </div>
+      </a>
+    </div>
+  </div>
+</div>
+        </li>
+        <li class="nav-item">
+          <a href="blog.html" class="nav-link">Blog</a>
+        </li>
+        <li class="nav-item">
+          <a href="contactsep.html" class="nav-link">Contact Us</a>
+        </li>
+      </ul>
+
+      <!-- HAMBURGER -->
+      <div class="hamburger" id="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+  </nav>
+
+  <!-- MOBILE MENU -->
+  <div class="mobile-overlay" id="mobileOverlay"></div>
+  <div class="mobile-menu" id="mobileMenu">
+    <div class="mobile-menu-header">
+      <div style="display: flex; align-items: center; gap: 12px;">
+        <img src="logopp.jpeg" alt="PediaCare" class="mobile-logo-img" style="height: 80px; width: auto; max-width: 260px; object-fit: contain; display: block;">
+        <div style="font-size: 1.2rem; font-weight: 600; color: var(--primary); border-left: 2px solid var(--accent); padding-left: 12px; line-height: 1.3;">
+          Practice<br>Pedodontics
+        </div>
+      </div>
+      <span class="mobile-logo-fallback" style="display: none;">PediaCare</span>
+      <button class="mobile-close" id="mobileClose">✕</button>
+    </div>
+    <ul class="mobile-nav-list">
+      <li class="mobile-nav-item">
+        <a href="index.html" class="mobile-nav-link active">Home</a>
+      </li>
+      <li class="mobile-nav-item">
+        <a href="about.html" class="mobile-nav-link">About Us</a>
+      </li>
+      <li class="mobile-nav-item" style="list-style: none;">
+  <div class="mobile-link-wrapper" style="display: flex; align-items: center; justify-content: space-between; width: 100%; cursor: pointer; padding: 12px 0;" onclick="toggleMobileSubmenu(event)">
+    <a href="#" class="mobile-nav-link" style="text-decoration: none; color: var(--text-dark); font-weight: 500; flex: 1; pointer-events: none;">Courses</a>
+    <button class="submenu-toggle" id="coursesToggle" style="background: none; border: 1px solid var(--primary); border-radius: 50%; width: 32px; height: 32px; cursor: pointer; color: var(--primary); font-size: 1.2rem; display: flex; align-items: center; justify-content: center; margin-left: 10px; flex-shrink: 0;" onclick="event.stopPropagation(); toggleMobileSubmenu(event)">
+      <span>+</span>
+    </button>
+  </div>
+  
+  <ul class="mobile-submenu" id="mobileSubmenu" style="display: none; list-style: none; padding-left: 20px; margin: 5px 0 0 0; background: #f9f9f9; border-radius: 8px;">
+    <li class="mobile-submenu-item" style="margin-bottom: 8px; padding: 8px 0; border-bottom: 1px solid #eee;">
+      <a href="course1.html" class="mobile-nav-link" style="display: flex; align-items: center; gap: 10px; text-decoration: none; color: var(--text-dark);" onclick="event.stopPropagation();">
+        <span class="menu-icon" style="font-size: 1.2rem;">🦷</span>
+        <span>Pediatric Dentistry</span>
+      </a>
+    </li>
+    <li class="mobile-submenu-item" style="margin-bottom: 8px; padding: 8px 0; border-bottom: 1px solid #eee;">
+      <a href="course2.html" class="mobile-nav-link" style="display: flex; align-items: center; gap: 10px; text-decoration: none; color: var(--text-dark);" onclick="event.stopPropagation();">
+        <span class="menu-icon" style="font-size: 1.2rem;">😁</span>
+        <span>Child Orthodontics</span>
+      </a>
+    </li>
+    <li class="mobile-submenu-item" style="margin-bottom: 8px; padding: 8px 0; border-bottom: 1px solid #eee;">
+      <a href="course3.html" class="mobile-nav-link" style="display: flex; align-items: center; gap: 10px; text-decoration: none; color: var(--text-dark);" onclick="event.stopPropagation();">
+        <span class="menu-icon" style="font-size: 1.2rem;">🦷</span>
+        <span>Pulp Therapy</span>
+      </a>
+    </li>
+    <li class="mobile-submenu-item" style="margin-bottom: 8px; padding: 8px 0; border-bottom: 1px solid #eee;">
+      <a href="course4.html" class="mobile-nav-link" style="display: flex; align-items: center; gap: 10px; text-decoration: none; color: var(--text-dark);" onclick="event.stopPropagation();">
+        <span class="menu-icon" style="font-size: 1.2rem;">🔬</span>
+        <span>Dental Radiology</span>
+      </a>
+    </li>
+    <li class="mobile-submenu-item" style="margin-bottom: 8px; padding: 8px 0; border-bottom: 1px solid #eee;">
+      <a href="course5.html" class="mobile-nav-link" style="display: flex; align-items: center; gap: 10px; text-decoration: none; color: var(--text-dark);" onclick="event.stopPropagation();">
+        <span class="menu-icon" style="font-size: 1.2rem;">🦷</span>
+        <span>Preventive Dentistry</span>
+      </a>
+    </li>
+    <li class="mobile-submenu-item" style="margin-bottom: 8px; padding: 8px 0;">
+      <a href="course6.html" class="mobile-nav-link" style="display: flex; align-items: center; gap: 10px; text-decoration: none; color: var(--text-dark);" onclick="event.stopPropagation();">
+        <span class="menu-icon" style="font-size: 1.2rem;">😴</span>
+        <span>Sedation Dentistry</span>
+      </a>
+    </li>
+  </ul>
+</li>
+
+<style>
+  /* Ensure the entire wrapper is clickable */
+  .mobile-link-wrapper {
+    cursor: pointer;
+    user-select: none;
+  }
+  
+  /* Submenu initially hidden */
+  .mobile-submenu {
+    display: none !important;
+  }
+  
+  /* When active class is added, show submenu */
+  .mobile-submenu.active {
+    display: block !important;
+  }
+</style>
+
+<script>
+// Simple JavaScript for toggling
+function toggleMobileSubmenu(event) {
+  event.preventDefault();
+  event.stopPropagation();
+  
+  var submenu = document.getElementById('mobileSubmenu');
+  var toggleBtn = document.getElementById('coursesToggle');
+  var icon = toggleBtn ? toggleBtn.querySelector('span') : null;
+  
+  if (submenu) {
+    // Toggle active class
+    submenu.classList.toggle('active');
+    
+    // Update icon
+    if (icon) {
+      if (submenu.classList.contains('active')) {
+        icon.textContent = '−';
+      } else {
+        icon.textContent = '+';
+      }
+    }
+  }
+}
+
+// Initialize - ensure submenu starts hidden
+document.addEventListener('DOMContentLoaded', function() {
+  var submenu = document.getElementById('mobileSubmenu');
+  if (submenu) {
+    submenu.classList.remove('active');
+  }
+});
+</script>
+      <li class="mobile-nav-item">
+        <a href="blog.html" class="mobile-nav-link">Blog</a>
+      </li>
+      <li class="mobile-nav-item">
+        <a href="contactsep.html" class="mobile-nav-link">Contact Us</a>
+      </li>
+    </ul>
+  </div>
+  
+
+  <!-- Floating Settings Button - COLORFUL -->
+  <button class="floating-settings" id="themeToggleBtn">
+    <span class="color-dots">
+      <span style="background: #FF6B35;"></span>
+      <span style="background: #7AC943;"></span>
+      <span style="background: #FF1493;"></span>
+      <span style="background: #FFD700;"></span>
+    </span>
+  </button>
+
+  <!-- Theme Panel -->
+  <div class="theme-panel" id="themePanel">
+    <div class="theme-panel-header">
+      <h4>Themes</h4>
+      <button class="close-panel" id="closePanel">✕</button>
+    </div>
+    <div class="theme-options">
+      <div class="theme-option" data-theme="theme1">Royal Purple</div>
+      <div class="theme-option" data-theme="theme2">Ocean Teal</div>
+      <div class="theme-option" data-theme="theme3">Berry Pink</div>
+      <div class="theme-option" data-theme="theme4">Forest Green</div>
+      <div class="theme-option" data-theme="theme5">Sunset Orange</div>
+    </div>
+  </div>
+</section>
+
+
+<br><br><br><br><br><br>
+
+
+<section class="course-details-premium">
+  <!-- Purple Banner with Breadcrumbs -->
+  <div class="course-banner">
+    <div class="banner-container">
+      <div class="breadcrumb">
+        <a href="#" class="breadcrumb-link">Home</a>
+        <span class="breadcrumb-sep">/</span>
+        <a href="#" class="breadcrumb-link">Courses</a>
+        <span class="breadcrumb-sep">/</span>
+        <span class="breadcrumb-current">Pediatric Dentistry Fundamentals</span>
+      </div>
+      <h1 class="banner-title">Pediatric Dentistry Fundamentals</h1>
+      <p class="banner-subtitle">Comprehensive foundation in child-centered dental care</p>
+    </div>
+  </div>
+
+  <div class="course-container">
+    <!-- Main Layout: Two Columns -->
+    <div class="course-layout">
+      <!-- Left Column: Main Content -->
+      <div class="course-main">
+        <!-- Course Image & Overview Combined -->
+        <div class="content-block overview-block">
+          <div class="course-image-wrapper">
+            <img src="https://images.pexels.com/photos/3779718/pexels-photo-3779718.jpeg?auto=compress&cs=tinysrgb&w=1200&h=600&fit=crop" alt="Pediatric Dentistry Course" class="course-image">
+            <div class="image-badge">
+              <span class="badge-text">Limited Seats</span>
+            </div>
+            <div class="image-rating">
+              <div class="rating-stars">
+                <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+              </div>
+              <span class="rating-count">4.9 · 342 reviews</span>
+            </div>
+          </div>
+          <h2 class="block-title">Course Overview</h2>
+          <p class="overview-text">This comprehensive offline course provides dental professionals with the essential knowledge and skills to deliver exceptional pediatric dental care. From child psychology to clinical techniques, you'll gain confidence in treating young patients through hands-on training at our institute.</p>
+          
+          <!-- Key Details - Offline Institute Focused -->
+          <div class="key-metrics">
+            <div class="metric-item">
+              <span class="metric-number">Classroom</span>
+              <span class="metric-label">Training</span>
+            </div>
+            <div class="metric-item">
+              <span class="metric-number">Hands-on</span>
+              <span class="metric-label">Practice</span>
+            </div>
+            <div class="metric-item">
+              <span class="metric-number">Certificate</span>
+              <span class="metric-label">Provided</span>
+            </div>
+            <div class="metric-item">
+              <span class="metric-number">Limited</span>
+              <span class="metric-label">Seats</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Curriculum Accordion - Simplified for Offline -->
+        <div class="content-block curriculum-block">
+          <div class="block-header">
+            <h2 class="block-title">Course Curriculum</h2>
+            <span class="module-count">4 modules</span>
+          </div>
+          
+          <div class="accordion-item">
+            <button class="accordion-header">
+              <span class="header-title">Module 1: Child Psychology & Behavior</span>
+              <span class="header-icon">+</span>
+            </button>
+            <div class="accordion-content">
+              <ul class="module-list">
+                <li>Understanding child development stages</li>
+                <li>Communication techniques by age group</li>
+                <li>Building trust with anxious children</li>
+                <li>Parent communication strategies</li>
+                <li>Case studies and role play</li>
+              </ul>
+            </div>
+          </div>
+          
+          <div class="accordion-item">
+            <button class="accordion-header">
+              <span class="header-title">Module 2: Preventive Dentistry</span>
+              <span class="header-icon">+</span>
+            </button>
+            <div class="accordion-content">
+              <ul class="module-list">
+                <li>Fluoride therapy protocols</li>
+                <li>Dental sealants application</li>
+                <li>Dietary counseling for caries prevention</li>
+                <li>Oral hygiene instruction techniques</li>
+                <li>Risk assessment tools</li>
+              </ul>
+            </div>
+          </div>
+          
+          <div class="accordion-item">
+            <button class="accordion-header">
+              <span class="header-title">Module 3: Clinical Procedures</span>
+              <span class="header-icon">+</span>
+            </button>
+            <div class="accordion-content">
+              <ul class="module-list">
+                <li>Pediatric restorative techniques</li>
+                <li>Pulp therapy for primary teeth</li>
+                <li>Space maintenance</li>
+                <li>Management of dental trauma</li>
+                <li>Local anesthesia techniques</li>
+              </ul>
+            </div>
+          </div>
+          
+          <div class="accordion-item">
+            <button class="accordion-header">
+              <span class="header-title">Module 4: Special Considerations</span>
+              <span class="header-icon">+</span>
+            </button>
+            <div class="accordion-content">
+              <ul class="module-list">
+                <li>Children with special needs</li>
+                <li>Medically compromised patients</li>
+                <li>Pharmacological behavior management</li>
+                <li>Emergency protocols</li>
+                <li>Final assessment</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- Benefits List -->
+        <div class="content-block benefits-block">
+          <h2 class="block-title">What You'll Gain</h2>
+          <ul class="benefits-list">
+            <li>
+              <span class="benefit-icon">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                  <circle cx="12" cy="12" r="10" fill="var(--accent)" fill-opacity="0.2" stroke="var(--accent)" stroke-width="2"/>
+                  <path d="M8 12L11 15L16 9" stroke="var(--accent)" stroke-width="2" stroke-linecap="round"/>
+                </svg>
+              </span>
+              <span class="benefit-text">Hands-on clinical simulation training at our institute</span>
+            </li>
+            <li>
+              <span class="benefit-icon">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                  <circle cx="12" cy="12" r="10" fill="var(--accent)" fill-opacity="0.2" stroke="var(--accent)" stroke-width="2"/>
+                  <path d="M8 12L11 15L16 9" stroke="var(--accent)" stroke-width="2" stroke-linecap="round"/>
+                </svg>
+              </span>
+              <span class="benefit-text">Expert faculty with pediatric specialization</span>
+            </li>
+            <li>
+              <span class="benefit-icon">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                  <circle cx="12" cy="12" r="10" fill="var(--accent)" fill-opacity="0.2" stroke="var(--accent)" stroke-width="2"/>
+                  <path d="M8 12L11 15L16 9" stroke="var(--accent)" stroke-width="2" stroke-linecap="round"/>
+                </svg>
+              </span>
+              <span class="benefit-text">Case-based learning with real scenarios</span>
+            </li>
+            <li>
+              <span class="benefit-icon">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                  <circle cx="12" cy="12" r="10" fill="var(--accent)" fill-opacity="0.2" stroke="var(--accent)" stroke-width="2"/>
+                  <path d="M8 12L11 15L16 9" stroke="var(--accent)" stroke-width="2" stroke-linecap="round"/>
+                </svg>
+              </span>
+              <span class="benefit-text">Certificate upon completion</span>
+            </li>
+            <li>
+              <span class="benefit-icon">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                  <circle cx="12" cy="12" r="10" fill="var(--accent)" fill-opacity="0.2" stroke="var(--accent)" stroke-width="2"/>
+                  <path d="M8 12L11 15L16 9" stroke="var(--accent)" stroke-width="2" stroke-linecap="round"/>
+                </svg>
+              </span>
+              <span class="benefit-text">Limited batch size for personalized attention</span>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Instructor Section -->
+        <div class="content-block instructor-block">
+          <h2 class="block-title">Course Instructor</h2>
+          <div class="instructor-card">
+            <div class="instructor-avatar">
+              <img src="https://images.pexels.com/photos/5215024/pexels-photo-5215024.jpeg?auto=compress&cs=tinysrgb&w=200&h=200&fit=crop" alt="Dr. Sarah Mitchell">
+            </div>
+            <div class="instructor-info">
+              <h3 class="instructor-name">Dr. Sarah Mitchell</h3>
+              <p class="instructor-title">Pediatric Dentistry Specialist · 15+ years experience</p>
+              <p class="instructor-bio">Dr. Mitchell has trained over 2,000 dental professionals in pediatric care and is a leading expert in child behavior management. She conducts offline training sessions at our institute.</p>
+              <div class="instructor-stats">
+                <span>⭐ 4.9 instructor rating</span>
+                <span>📋 8 courses</span>
+                <span>👥 3.5k+ students</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Venue Information - New for Offline Institute -->
+        <div class="content-block venue-block">
+          <h2 class="block-title">Venue & Schedule</h2>
+          <div class="venue-card">
+            <div class="venue-item">
+              <span class="venue-label">📍 Location</span>
+              <span class="venue-value">Pedodontic Practice Institute, 123 Medical Center, Suite 100, City</span>
+            </div>
+            <div class="venue-item">
+              <span class="venue-label">📅 Start Date</span>
+              <span class="venue-value">March 15, 2024</span>
+            </div>
+            <div class="venue-item">
+              <span class="venue-label">⏰ Schedule</span>
+              <span class="venue-value">Weekends (Sat & Sun) · 10 AM to 5 PM</span>
+            </div>
+            <div class="venue-item">
+              <span class="venue-label">👥 Batch Size</span>
+              <span class="venue-value">Limited to 15 participants</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- FAQ Section -->
+        <div class="content-block faq-block">
+          <h2 class="block-title">Frequently Asked Questions</h2>
+          <div class="faq-item">
+            <button class="faq-question">
+              <span>Is this course conducted offline?</span>
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer">
+              <p>Yes, this is a completely offline, classroom-based training at our institute with hands-on practice sessions.</p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question">
+              <span>Do I get a certificate?</span>
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer">
+              <p>Yes, you will receive a certificate of completion from our institute.</p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question">
+              <span>What is the batch size?</span>
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer">
+              <p>We maintain small batches of 15 participants to ensure personalized attention and quality learning.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right Column: Enhanced Sticky Sidebar -->
+      <div class="course-sidebar">
+        <div class="sidebar-card">
+          <div class="card-price">
+            <span class="price-currency">₹</span>
+            <span class="price-value">24,999</span>
+            <span class="price-note">+ GST</span>
+          </div>
+          
+          <!-- Limited Seats Alert -->
+          <div class="seats-alert">
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+              <circle cx="10" cy="10" r="9" stroke="var(--accent)" stroke-width="2"/>
+              <path d="M10 6V10M10 14H10.01" stroke="var(--accent)" stroke-width="2" stroke-linecap="round"/>
+            </svg>
+            <span>Only 5 seats remaining</span>
+          </div>
+          
+          <ul class="sidebar-features">
+            <li>
+              <svg width="18" height="18" viewBox="0 0 18 18" fill="none">
+                <circle cx="9" cy="9" r="8" stroke="var(--accent)" stroke-width="2"/>
+                <path d="M5 9L7 11L12 6" stroke="var(--accent)" stroke-width="2" stroke-linecap="round"/>
+              </svg>
+              <span>4 weekends · 28 hours</span>
+            </li>
+            <li>
+              <svg width="18" height="18" viewBox="0 0 18 18" fill="none">
+                <circle cx="9" cy="9" r="8" stroke="var(--accent)" stroke-width="2"/>
+                <path d="M5 9L7 11L12 6" stroke="var(--accent)" stroke-width="2" stroke-linecap="round"/>
+              </svg>
+              <span>Certificate included</span>
+            </li>
+            <li>
+              <svg width="18" height="18" viewBox="0 0 18 18" fill="none">
+                <circle cx="9" cy="9" r="8" stroke="var(--accent)" stroke-width="2"/>
+                <path d="M5 9L7 11L12 6" stroke="var(--accent)" stroke-width="2" stroke-linecap="round"/>
+              </svg>
+              <span>Hands-on training</span>
+            </li>
+            <li>
+              <svg width="18" height="18" viewBox="0 0 18 18" fill="none">
+                <circle cx="9" cy="9" r="8" stroke="var(--accent)" stroke-width="2"/>
+                <path d="M5 9L7 11L12 6" stroke="var(--accent)" stroke-width="2" stroke-linecap="round"/>
+              </svg>
+              <span>Study materials provided</span>
+            </li>
+          </ul>
+          
+          <button class="sidebar-enroll" id="sidebarEnrollBtn">Enroll Now</button>
+          
+          <div class="contact-info-sidebar">
+            <div class="contact-item">
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                <path d="M14 11.5v2a1 1 0 0 1-1 1 14 14 0 0 1-12-12 1 1 0 0 1 1-1h2a1 1 0 0 1 1 1c0 .7.1 1.4.3 2a1 1 0 0 1-.2 1L5 6a12 12 0 0 0 5 5l1-1.2a1 1 0 0 1 1-.2c.6.2 1.3.4 2 .4a1 1 0 0 1 1 1z" stroke="var(--accent)" fill="none"/>
+              </svg>
+              <span style="color: #000000 !important; opacity: 1 !important; text-decoration: none !important;">+91 98765 43210</span>
+            </div>
+            <div class="contact-item">
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                <path d="M2 3h12a1 1 0 0 1 1 1v8a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1z" stroke="var(--accent)" fill="none"/>
+                <path d="M15 4L8 9 1 4" stroke="var(--accent)" fill="none"/>
+              </svg>
+              <span style="color: #000000 !important; opacity: 1 !important; text-decoration: none !important;">admissions@institute.com</span>
+            </div>
+          </div>
+          
+          <div class="sidebar-guarantee">
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+              <path d="M10 2L12 7H18L13 11L15 16L10 13L5 16L7 11L2 7H8L10 2Z" fill="var(--accent)"/>
+            </svg>
+            <span>100% satisfaction guaranteed</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+
+
+<section class="contact-connect">
+  <!-- Decorative background elements -->
+  <div class="connect-bg-orb orb-purple"></div>
+  <div class="connect-bg-orb orb-lime"></div>
+  
+  <div class="connect-wrapper">
+    <!-- Section Header -->
+    <div class="connect-header">
+      <h2 class="connect-heading">Get in Touch</h2>
+      <p class="connect-subheading">We're here to answer all your questions</p>
+      <div class="connect-accent-line"></div>
+    </div>
+    
+    <div class="connect-layout">
+      <!-- Left: Contact Information -->
+      <div class="connect-info-panel">
+        <div class="info-panel-card">
+          <h3 class="panel-title">Contact Information</h3>
+          <p class="panel-desc">Reach out to us anytime. Our team is ready to assist you.</p>
+          
+          <!-- Address -->
+          <div class="panel-item">
+            <div class="item-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z" fill="currentColor"/>
+              </svg>
+            </div>
+            <div class="item-detail">
+              <span class="detail-label">Address</span>
+              <span class="detail-value">123 Pediatric Dental Way, Suite 100, Medical City, MC 12345</span>
+            </div>
+          </div>
+          
+          <!-- Phone -->
+          <div class="panel-item">
+            <div class="item-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M20 15.5c-1.25 0-2.45-.2-3.57-.57-.35-.11-.74-.03-1.02.24l-2.2 2.2c-2.83-1.44-5.15-3.75-6.59-6.59l2.2-2.21c.28-.27.36-.66.25-1.01C8.7 6.45 8.5 5.25 8.5 4c0-.55-.45-1-1-1H4c-.55 0-1 .45-1 1 0 9.39 7.61 17 17 17 .55 0 1-.45 1-1v-3.5c0-.55-.45-1-1-1z" fill="currentColor"/>
+              </svg>
+            </div>
+            <div class="item-detail">
+              <span class="detail-label">Phone</span>
+              <span class="detail-value">+1 (555) 123-4567</span>
+            </div>
+          </div>
+          
+          <!-- Email -->
+          <div class="panel-item">
+            <div class="item-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z" fill="currentColor"/>
+              </svg>
+            </div>
+            <div class="item-detail">
+              <span class="detail-label">Email</span>
+              <span class="detail-value">info@pedodonticpractice.com</span>
+            </div>
+          </div>
+          
+          <!-- Business Hours -->
+          <div class="panel-hours">
+            <div class="hours-icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2"/>
+                <path d="M12 6V12L16 14" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+              </svg>
+            </div>
+            <div class="hours-text">
+              <span>Mon - Fri: 9:00 AM - 6:00 PM</span>
+              <span>Sat: 9:00 AM - 2:00 PM</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Right: Contact Form -->
+      <div class="connect-form-panel">
+        <div class="form-panel-card">
+          <h3 class="form-panel-heading">Send us a Message</h3>
+          <p class="form-panel-desc">We'll get back to you within 24 hours</p>
+          
+          <form class="connect-form" id="connectForm" action="#" method="post">
+            <div class="form-row">
+              <label for="fullName" class="row-label">Full Name</label>
+             <input 
+  type="text" 
+  id="fullName" 
+  name="fullName" 
+  class="row-input" 
+  placeholder="Dr. John Smith" 
+  required
+  oninput="validateName()"
+>
+
+<span id="nameError" style="color: red; font-size: 14px; display: none;">
+  Enter only alphabets
+</span>
+
+              <div class="row-error" id="fullNameError"></div>
+            </div>
+            
+            <div class="form-row">
+              <label for="emailAddress" class="row-label">Email Address</label>
+              <input type="email" id="emailAddress" name="emailAddress" class="row-input" placeholder="john@example.com" required>
+              <div class="row-error" id="emailAddressError"></div>
+            </div>
+            
+            <div class="form-row">
+              <label for="mobileNumber" class="row-label">Phone Number</label>
+              <input type="tel" id="mobileNumber" name="mobileNumber" class="row-input" placeholder="9876543210" maxlength="10" required>
+              <div class="row-error" id="mobileNumberError"></div>
+            </div>
+            
+            <div class="form-row">
+              <label for="yourMessage" class="row-label">Message</label>
+              <textarea id="yourMessage" name="yourMessage" class="row-textarea" rows="4" placeholder="How can we help you?" required></textarea>
+              <div class="row-error" id="yourMessageError"></div>
+            </div>
+            
+            <button type="submit" class="form-submit-action" id="connectSubmitBtn">
+              <span>Send Message</span>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
+                <path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </button>
+          </form>
+          
+          <div class="form-success-message" id="connectSuccessMsg">
+            <svg width="40" height="40" viewBox="0 0 24 24" fill="none">
+              <circle cx="12" cy="12" r="10" fill="var(--accent)" stroke="var(--accent)" stroke-width="2"/>
+              <path d="M8 12L11 15L16 9" stroke="white" stroke-width="2" stroke-linecap="round"/>
+            </svg>
+            <p>Thank you! Your message has been sent successfully.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="footer-premium">
+  <!-- Main Footer -->
+  <div class="footer-main">
+    <div class="footer-container">
+      <div class="footer-grid">
+        <!-- Column 1: Logo & Brand -->
+        <div class="footer-col brand-col">
+          <div class="footer-logo-wrapper">
+            <div class="footer-logo-icon">
+              <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="20" cy="20" r="18" fill="var(--accent)" stroke="white" stroke-width="2"/>
+                <path d="M12 20L17 25L28 14" stroke="white" stroke-width="3" stroke-linecap="round"/>
+              </svg>
+            </div>
+            <span class="footer-logo-text">Pedodontic<span class="logo-accent">Practice</span></span>
+          </div>
+          <p class="footer-brand-desc">Providing excellence in pediatric dental education and care for the next generation of specialists.</p>
+          <div class="footer-social">
+            <a href="#" class="social-link" aria-label="Facebook">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3V2z" fill="currentColor"/>
+              </svg>
+            </a>
+            <a href="#" class="social-link" aria-label="Instagram">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                <rect x="2" y="2" width="20" height="20" rx="5" stroke="currentColor" stroke-width="2"/>
+                <circle cx="12" cy="12" r="3" stroke="currentColor" stroke-width="2"/>
+                <circle cx="18" cy="6" r="1.5" fill="currentColor"/>
+              </svg>
+            </a>
+            <a href="#" class="social-link" aria-label="Twitter">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                <path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z" fill="currentColor"/>
+              </svg>
+            </a>
+            <a href="#" class="social-link" aria-label="LinkedIn">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" fill="currentColor"/>
+                <rect x="2" y="9" width="4" height="12" fill="currentColor"/>
+                <circle cx="4" cy="4" r="2" fill="currentColor"/>
+              </svg>
+            </a>
+          </div>
+        </div>
+        
+        <!-- Column 2: Quick Links -->
+        <div class="footer-col">
+          <h3 class="footer-heading">Quick Links</h3>
+          <ul class="footer-links">
+            <li><a href="#" class="footer-link">Home</a></li>
+            <li><a href="#" class="footer-link">About Us</a></li>
+            <li><a href="#" class="footer-link">Why Choose Us</a></li>
+            <li><a href="#" class="footer-link">Faculty</a></li>
+            <li><a href="#" class="footer-link">Contact</a></li>
+          </ul>
+        </div>
+        
+        <!-- Column 3: Courses Links -->
+        <div class="footer-col">
+          <h3 class="footer-heading">Our Courses</h3>
+          <ul class="footer-links">
+            <li><a href="#" class="footer-link">Pediatric Fundamentals</a></li>
+            <li><a href="#" class="footer-link">Advanced Techniques</a></li>
+            <li><a href="#" class="footer-link">Sedation Management</a></li>
+            <li><a href="#" class="footer-link">Orthodontics for Children</a></li>
+            <li><a href="#" class="footer-link">Special Needs Dentistry</a></li>
+          </ul>
+        </div>
+        
+        <!-- Column 4: Contact Info -->
+        <div class="footer-col">
+          <h3 class="footer-heading">Get in Touch</h3>
+          <ul class="footer-contact">
+            <li class="contact-item">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
+                <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z" stroke="currentColor" stroke-width="2"/>
+                <circle cx="12" cy="9" r="2.5" stroke="currentColor" stroke-width="2"/>
+              </svg>
+              <span style="color: white;">123 Pediatric Way, Medical City</span>
+            </li>
+            <li class="contact-item">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
+                <path d="M22 16.92v3a1.999 1.999 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.362 1.903.7 2.81a2 2 0 0 1-.45 2.11L8 10a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.338 1.85.573 2.81.7A2 2 0 0 1 22 16.92z" stroke="currentColor" stroke-width="2"/>
+              </svg>
+              <span style="color: white;">+1 (555) 123-4567</span>
+            </li>
+            <li class="contact-item">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
+                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" stroke="currentColor" stroke-width="2"/>
+                <polyline points="22,6 12,13 2,6" stroke="currentColor" stroke-width="2"/>
+              </svg>
+              <span style="color: white;">info@pedodontic.com</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Footer Bottom -->
+  <div class="footer-bottom">
+    <div class="footer-container">
+      <div class="footer-bottom-content">
+        <p class="copyright">© 2024 Pedodontic Practice. All rights reserved.</p>
+        <div class="footer-bottom-links">
+          <a href="#" class="bottom-link">Privacy Policy</a>
+          <span class="bottom-sep">|</span>
+          <a href="#" class="bottom-link">Terms of Use</a>
+          <span class="bottom-sep">|</span>
+          <a href="#" class="bottom-link">Cookie Policy</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+</body>
+<script src="script.js"></script>
+<script src="hero.js"></script>
+<script src="about.js"></script>
+<script src="courses.js"></script>
+<script src="insta.js"></script>
+<script src="homecontact.js"></script>
+
+
+<script>
+  window.addEventListener('scroll', function() {
+  const nav = document.querySelector('.navbar');
+  
+  // If user scrolls more than 50px, add 'scrolled' class
+  if (window.scrollY > 50) {
+    nav.classList.add('scrolled');
+  } else {
+    nav.classList.remove('scrolled');
+  }
+});
+</script>
+<script src="course2.js"></script>
+
+<script>
+  // ===== COMPLETE MOBILE NAVIGATION FIX =====
+(function() {
+  'use strict';
+  
+  // FIX 1: Ensure all mobile links have correct hrefs
+  function fixMobileLinks() {
+    const mobileLinks = [
+      { selector: 'a[href="index.html"]', text: 'Home', correct: 'index.html' },
+      { selector: 'a[href="about.html"]', text: 'About Us', correct: 'about.html' },
+      { selector: 'a[href="blog.html"]', text: 'Blog', correct: 'blog.html' },
+      { selector: 'a[href="contactsep.html"]', text: 'Contact Us', correct: 'contactsep.html' }
+    ];
+    
+    // Fix by selector first
+    mobileLinks.forEach(item => {
+      const links = document.querySelectorAll(item.selector);
+      links.forEach(link => {
+        link.setAttribute('href', item.correct);
+        console.log(`Fixed ${item.text} link: ${item.correct}`);
+      });
+    });
+    
+    // Fix by text content
+    document.querySelectorAll('.mobile-nav-link').forEach(link => {
+      const text = link.textContent.trim();
+      if (text === 'Home') link.setAttribute('href', 'index.html');
+      else if (text === 'About Us') link.setAttribute('href', 'about.html');
+      else if (text === 'Blog') link.setAttribute('href', 'blog.html');
+      else if (text === 'Contact Us') link.setAttribute('href', 'contactsep.html');
+    });
+    
+    // Fix submenu course links
+    const courseLinks = [
+      { selector: 'a[href="course1.html"]', correct: 'course1.html' },
+      { selector: 'a[href="course2.html"]', correct: 'course2.html' },
+      { selector: 'a[href="course3.html"]', correct: 'course3.html' },
+      { selector: 'a[href="course4.html"]', correct: 'course4.html' },
+      { selector: 'a[href="course5.html"]', correct: 'course5.html' },
+      { selector: 'a[href="course6.html"]', correct: 'course6.html' }
+    ];
+    
+    courseLinks.forEach(item => {
+      const links = document.querySelectorAll(item.selector);
+      links.forEach(link => {
+        link.setAttribute('href', item.correct);
+      });
+    });
+  }
+  
+  // FIX 2: Direct click handler that forces navigation
+  function setupNavigation() {
+    // Remove all existing click handlers by cloning
+    const allLinks = document.querySelectorAll('.mobile-nav-link, .mobile-submenu a');
+    
+    allLinks.forEach(link => {
+      // Store href before cloning
+      const href = link.getAttribute('href');
+      
+      // Create new link
+      const newLink = document.createElement('a');
+      newLink.className = link.className;
+      newLink.setAttribute('href', href || '#');
+      newLink.innerHTML = link.innerHTML;
+      
+      // Replace old link
+      link.parentNode.replaceChild(newLink, link);
+    });
+    
+    // Add fresh click handler to all links
+    document.querySelectorAll('.mobile-nav-link, .mobile-submenu a').forEach(link => {
+      link.addEventListener('click', function(e) {
+        const href = this.getAttribute('href');
+        
+        if (href && href !== '#' && href !== '') {
+          e.preventDefault(); // Stop any other handlers
+          window.location.href = href; // Force navigation
+          console.log('Navigating to:', href);
+          return false;
+        }
+      });
+    });
+  }
+  
+  // FIX 3: Submenu toggle fix
+  function fixSubmenuToggle() {
+    const toggleBtn = document.getElementById('coursesToggle');
+    const submenu = document.getElementById('mobileSubmenu');
+    const coursesLink = document.querySelector('.mobile-link-wrapper .mobile-nav-link');
+    
+    if (toggleBtn && submenu) {
+      // Remove existing handlers
+      const newToggle = toggleBtn.cloneNode(true);
+      toggleBtn.parentNode.replaceChild(newToggle, toggleBtn);
+      
+      // Add new handler
+      newToggle.addEventListener('click', function(e) {
+        e.preventDefault();
+        e.stopPropagation();
+        
+        const icon = this.querySelector('span');
+        submenu.classList.toggle('active');
+        
+        if (submenu.classList.contains('active')) {
+          icon.textContent = '−';
+          submenu.style.display = 'block';
+        } else {
+          icon.textContent = '+';
+          submenu.style.display = 'none';
+        }
+      });
+    }
+    
+    // Fix courses parent link - should not navigate, just open submenu
+    if (coursesLink) {
+      coursesLink.addEventListener('click', function(e) {
+        e.preventDefault();
+        // Optionally toggle submenu here too
+        if (toggleBtn) toggleBtn.click();
+      });
+    }
+  }
+  
+  // FIX 4: Mobile menu close button fix
+  function fixMobileMenuControls() {
+    const closeBtn = document.getElementById('mobileClose');
+    const overlay = document.getElementById('mobileOverlay');
+    const mobileMenu = document.getElementById('mobileMenu');
+    const menuToggle = document.querySelector('.menu-toggle'); // Assuming you have a menu toggle button
+    
+    if (closeBtn) {
+      const newClose = closeBtn.cloneNode(true);
+      closeBtn.parentNode.replaceChild(newClose, closeBtn);
+      
+      newClose.addEventListener('click', function() {
+        if (mobileMenu) mobileMenu.classList.remove('active');
+        if (overlay) overlay.classList.remove('active');
+        document.body.style.overflow = '';
+      });
+    }
+    
+    if (overlay) {
+      const newOverlay = overlay.cloneNode(true);
+      overlay.parentNode.replaceChild(newOverlay, overlay);
+      
+      newOverlay.addEventListener('click', function() {
+        if (mobileMenu) mobileMenu.classList.remove('active');
+        this.classList.remove('active');
+        document.body.style.overflow = '';
+      });
+    }
+    
+    if (menuToggle) {
+      const newToggle = menuToggle.cloneNode(true);
+      menuToggle.parentNode.replaceChild(newToggle, menuToggle);
+      
+      newToggle.addEventListener('click', function() {
+        if (mobileMenu) mobileMenu.classList.add('active');
+        if (overlay) overlay.classList.add('active');
+        document.body.style.overflow = 'hidden';
+      });
+    }
+  }
+  
+  // FIX 5: CSS fixes
+  function addCSSFixes() {
+    const style = document.createElement('style');
+    style.textContent = `
+      .mobile-nav-link, .mobile-submenu a {
+        cursor: pointer !important;
+        pointer-events: auto !important;
+        z-index: 10000 !important;
+        position: relative;
+      }
+      
+      .mobile-menu {
+        z-index: 9999;
+      }
+      
+      .mobile-submenu {
+        display: none;
+        padding-left: 20px;
+      }
+      
+      .mobile-submenu.active {
+        display: block;
+      }
+      
+      .mobile-link-wrapper {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+      }
+      
+      .submenu-toggle {
+        background: none;
+        border: 1px solid var(--primary);
+        border-radius: 50%;
+        width: 32px;
+        height: 32px;
+        cursor: pointer;
+        color: var(--primary);
+        font-size: 1.2rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      
+      .submenu-toggle:hover {
+        background: var(--accent);
+        color: white;
+        border-color: var(--accent);
+      }
+      
+      .mobile-overlay.active {
+        display: block;
+      }
+    `;
+    document.head.appendChild(style);
+  }
+  
+  // Initialize all fixes
+  function init() {
+    fixMobileLinks();
+    setupNavigation();
+    fixSubmenuToggle();
+    fixMobileMenuControls();
+    addCSSFixes();
+    
+    console.log('Mobile navigation fixed!');
+  }
+  
+  // Run after DOM is ready
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', init);
+  } else {
+    init();
+  }
+  
+})();
+</script>
+</html>

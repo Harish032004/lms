@@ -1,0 +1,615 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="csss/style.css">
+    <link rel="stylesheet" href="coursedetails1.css">
+</head>
+<body>
+<section class="navbar-section" id="navbar-section">
+  <!-- Sticky glassmorphism navbar -->
+  <nav class="navbar" id="mainNavbar">
+    <div class="nav-container">
+      <!-- Logo with INLINE CSS for EXTRA BIG SIZE + Practice Pedodontics text (right side of logo) -->
+      <div class="nav-logo">
+        <img src="logopp.jpeg" alt="PediaCare" class="logo-img" style="height: 110px; width: auto; max-width: 320px; object-fit: contain; display: block;">
+        <span class="logo-fallback" style="display: none;">PediaCare</span>
+        <!-- Practice Pedodontics text - RIGHT SIDE OF LOGO -->
+        <div class="practice-text" style="margin-left: 20px; font-size: 1.5rem; font-weight: 600; color: var(--primary); letter-spacing: 0.5px; border-left: 3px solid var(--accent); padding-left: 20px; line-height: 1.3;">
+          Practice<br>Pedodontics
+        </div>
+      </div>
+
+      <!-- Desktop Navigation -->
+      <ul class="nav-menu" id="navMenu">
+        <li class="nav-item">
+          <a href="#" class="nav-link active">Home</a>
+        </li>
+        <li class="nav-item">
+          <a href="#" class="nav-link">About Us</a>
+        </li>
+        <li class="nav-item dropdown-trigger">
+          <a href="#" class="nav-link">
+            Courses
+            <svg class="dropdown-icon" width="16" height="16" viewBox="0 0 16 16" fill="none">
+              <path d="M4 6L8 10L12 6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+            </svg>
+          </a>
+          <!-- Mega Menu - PEDODONTICS COURSES -->
+          <div class="mega-menu">
+            <div class="mega-menu-container">
+              <div class="mega-column">
+                <div class="course-card">
+                  <div class="course-icon">🦷</div>
+                  <div class="course-content">
+                    <h4>Pediatric Dentistry</h4>
+                    <p>Primary teeth care & treatment</p>
+                  </div>
+                </div>
+                <div class="course-card">
+                  <div class="course-icon">😁</div>
+                  <div class="course-content">
+                    <h4>Child Orthodontics</h4>
+                    <p>Early intervention & braces</p>
+                  </div>
+                </div>
+                <div class="course-card">
+                  <div class="course-icon">🦷</div>
+                  <div class="course-content">
+                    <h4>Pulp Therapy</h4>
+                    <p>Pediatric root canals</p>
+                  </div>
+                </div>
+              </div>
+              <div class="mega-column">
+                <div class="course-card">
+                  <div class="course-icon">🔬</div>
+                  <div class="course-content">
+                    <h4>Dental Radiology</h4>
+                    <p>Pediatric imaging techniques</p>
+                  </div>
+                </div>
+                <div class="course-card">
+                  <div class="course-icon">🦷</div>
+                  <div class="course-content">
+                    <h4>Preventive Dentistry</h4>
+                    <p>Fluoride & sealants</p>
+                  </div>
+                </div>
+                <div class="course-card">
+                  <div class="course-icon">😴</div>
+                  <div class="course-content">
+                    <h4>Sedation Dentistry</h4>
+                    <p>Pediatric behavior management</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li class="nav-item">
+          <a href="#" class="nav-link">Blog</a>
+        </li>
+        <li class="nav-item">
+          <a href="#" class="nav-link">Contact Us</a>
+        </li>
+      </ul>
+
+      <!-- HAMBURGER -->
+      <div class="hamburger" id="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+  </nav>
+
+  <!-- MOBILE MENU -->
+  <div class="mobile-overlay" id="mobileOverlay"></div>
+  <div class="mobile-menu" id="mobileMenu">
+    <div class="mobile-menu-header">
+      <div style="display: flex; align-items: center; gap: 12px;">
+        <img src="logopp.jpeg" alt="PediaCare" class="mobile-logo-img" style="height: 90px; width: auto; max-width: 260px; object-fit: contain; display: block;">
+        <div style="font-size: 1.2rem; font-weight: 600; color: var(--primary); border-left: 2px solid var(--accent); padding-left: 12px; line-height: 1.3;">
+          Practice<br>Pedodontics
+        </div>
+      </div>
+      <span class="mobile-logo-fallback" style="display: none;">PediaCare</span>
+      <button class="mobile-close" id="mobileClose">✕</button>
+    </div>
+    <ul class="mobile-nav-list">
+      <li class="mobile-nav-item">
+        <a href="#" class="mobile-nav-link active">Home</a>
+      </li>
+      <li class="mobile-nav-item">
+        <a href="#" class="mobile-nav-link">About Us</a>
+      </li>
+      <li class="mobile-nav-item">
+        <div class="mobile-link-wrapper">
+          <a href="#" class="mobile-nav-link">Courses</a>
+          <button class="submenu-toggle" id="coursesToggle">
+            <span>+</span>
+          </button>
+        </div>
+        <ul class="mobile-submenu" id="mobileSubmenu">
+          <li class="mobile-submenu-item">
+            <span class="menu-icon">🦷</span>
+            <span>Pediatric Dentistry</span>
+          </li>
+          <li class="mobile-submenu-item">
+            <span class="menu-icon">😁</span>
+            <span>Child Orthodontics</span>
+          </li>
+          <li class="mobile-submenu-item">
+            <span class="menu-icon">🦷</span>
+            <span>Pulp Therapy</span>
+          </li>
+          <li class="mobile-submenu-item">
+            <span class="menu-icon">🔬</span>
+            <span>Dental Radiology</span>
+          </li>
+          <li class="mobile-submenu-item">
+            <span class="menu-icon">🦷</span>
+            <span>Preventive Dentistry</span>
+          </li>
+          <li class="mobile-submenu-item">
+            <span class="menu-icon">😴</span>
+            <span>Sedation Dentistry</span>
+          </li>
+        </ul>
+      </li>
+      <li class="mobile-nav-item">
+        <a href="#" class="mobile-nav-link">Blog</a>
+      </li>
+      <li class="mobile-nav-item">
+        <a href="#" class="mobile-nav-link">Contact Us</a>
+      </li>
+    </ul>
+  </div>
+
+  <!-- Floating Settings Button - COLORFUL -->
+  <button class="floating-settings" id="themeToggleBtn">
+    <span class="color-dots">
+      <span style="background: #FF6B35;"></span>
+      <span style="background: #7AC943;"></span>
+      <span style="background: #FF1493;"></span>
+      <span style="background: #FFD700;"></span>
+    </span>
+  </button>
+
+  <!-- Theme Panel -->
+  <div class="theme-panel" id="themePanel">
+    <div class="theme-panel-header">
+      <h4>Themes</h4>
+      <button class="close-panel" id="closePanel">✕</button>
+    </div>
+    <div class="theme-options">
+      <div class="theme-option" data-theme="theme1">Royal Purple</div>
+      <div class="theme-option" data-theme="theme2">Ocean Teal</div>
+      <div class="theme-option" data-theme="theme3">Berry Pink</div>
+      <div class="theme-option" data-theme="theme4">Forest Green</div>
+      <div class="theme-option" data-theme="theme5">Sunset Orange</div>
+    </div>
+  </div>
+</section>
+
+     <!-- Floating Settings Button - COLORFUL -->
+  <button class="floating-settings" id="themeToggleBtn">
+    <span class="color-dots">
+      <span style="background: #FF6B35;"></span>
+      <span style="background: #7AC943;"></span>
+      <span style="background: #FF1493;"></span>
+      <span style="background: #FFD700;"></span>
+    </span>
+  </button>
+
+  <!-- Theme Panel -->
+  <div class="theme-panel" id="themePanel">
+    <div class="theme-panel-header">
+      <h4>Themes</h4>
+      <button class="close-panel" id="closePanel">✕</button>
+    </div>
+    <div class="theme-options">
+      <div class="theme-option" data-theme="theme1">Royal Purple</div>
+      <div class="theme-option" data-theme="theme2">Ocean Teal</div>
+      <div class="theme-option" data-theme="theme3">Berry Pink</div>
+      <div class="theme-option" data-theme="theme4">Forest Green</div>
+      <div class="theme-option" data-theme="theme5">Sunset Orange</div>
+    </div>
+  </div>
+<br><br><br><br><br><br><br>
+
+ <section class="course-details-premium">
+  <!-- Purple Banner with Breadcrumbs -->
+  <div class="course-banner">
+    <div class="banner-container">
+      <div class="breadcrumb">
+        <a href="#" class="breadcrumb-link">Home</a>
+        <span class="breadcrumb-sep">/</span>
+        <a href="#" class="breadcrumb-link">Courses</a>
+        <span class="breadcrumb-sep">/</span>
+        <span class="breadcrumb-current">Pediatric Dentistry Fundamentals</span>
+      </div>
+      <h1 class="banner-title">Pediatric Dentistry Fundamentals</h1>
+      <p class="banner-subtitle">Comprehensive foundation in child-centered dental care</p>
+    </div>
+  </div>
+
+  <div class="course-container">
+    <!-- Main Layout: Two Columns -->
+    <div class="course-layout">
+      <!-- Left Column: Main Content -->
+      <div class="course-main">
+        <!-- Course Image & Overview Combined -->
+        <div class="content-block overview-block">
+          <div class="course-image-wrapper">
+            <img src="https://images.pexels.com/photos/3779718/pexels-photo-3779718.jpeg?auto=compress&cs=tinysrgb&w=1200&h=600&fit=crop" alt="Pediatric Dentistry Course" class="course-image">
+            <div class="image-badge">
+              <span class="badge-text">Bestseller</span>
+            </div>
+            <div class="image-rating">
+              <div class="rating-stars">
+                <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+              </div>
+              <span class="rating-count">(4.9 · 342 reviews)</span>
+            </div>
+          </div>
+          <h2 class="block-title">Pediatric Dentistry Fundamentals Overview</h2>
+          <p class="overview-text">This comprehensive course provides dental professionals with the essential knowledge and skills to deliver exceptional pediatric dental care. From child psychology to clinical techniques, you'll gain confidence in treating young patients.</p>
+          <div class="overview-highlights">
+            <div class="highlight-item">
+              <span class="highlight-label">Duration:</span>
+              <span class="highlight-value">12 weeks</span>
+            </div>
+            <div class="highlight-item">
+              <span class="highlight-label">Skill Level:</span>
+              <span class="highlight-value">Beginner to Intermediate</span>
+            </div>
+            <div class="highlight-item">
+              <span class="highlight-label">Certificate:</span>
+              <span class="highlight-value">Yes</span>
+            </div>
+            <div class="highlight-item">
+              <span class="highlight-label">Students:</span>
+              <span class="highlight-value">1,247 enrolled</span>
+            </div>
+          </div>
+          
+          <!-- Key Metrics -->
+          <div class="key-metrics">
+            <div class="metric-item">
+              <span class="metric-number">24/7</span>
+              <span class="metric-label">Access</span>
+            </div>
+            <div class="metric-item">
+              <span class="metric-number">15</span>
+              <span class="metric-label">CME Credits</span>
+            </div>
+            <div class="metric-item">
+              <span class="metric-number">4.9</span>
+              <span class="metric-label">Rating</span>
+            </div>
+            <div class="metric-item">
+              <span class="metric-number">42</span>
+              <span class="metric-label">Lessons</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Curriculum Accordion with Progress -->
+        <div class="content-block curriculum-block">
+          <div class="block-header">
+            <h2 class="block-title">Curriculum</h2>
+            <span class="module-count">4 modules · 42 lessons</span>
+          </div>
+          
+          <div class="accordion-item">
+            <button class="accordion-header">
+              <span class="header-title">Module 1: Child Psychology & Behavior</span>
+              <span class="header-meta">
+                <span class="lesson-count">8 lessons</span>
+                <span class="header-icon">+</span>
+              </span>
+            </button>
+            <div class="accordion-content">
+              <ul class="module-list">
+                <li>Understanding child development stages <span class="lesson-duration">45 min</span></li>
+                <li>Communication techniques by age group <span class="lesson-duration">50 min</span></li>
+                <li>Building trust with anxious children <span class="lesson-duration">40 min</span></li>
+                <li>Parent communication strategies <span class="lesson-duration">35 min</span></li>
+                <li>Case studies and role play <span class="lesson-duration">60 min</span></li>
+                <li>Quiz: Behavior management <span class="lesson-duration">20 min</span></li>
+              </ul>
+            </div>
+          </div>
+          
+          <div class="accordion-item">
+            <button class="accordion-header">
+              <span class="header-title">Module 2: Preventive Dentistry</span>
+              <span class="header-meta">
+                <span class="lesson-count">10 lessons</span>
+                <span class="header-icon">+</span>
+              </span>
+            </button>
+            <div class="accordion-content">
+              <ul class="module-list">
+                <li>Fluoride therapy protocols <span class="lesson-duration">40 min</span></li>
+                <li>Dental sealants application <span class="lesson-duration">45 min</span></li>
+                <li>Dietary counseling for caries prevention <span class="lesson-duration">35 min</span></li>
+                <li>Oral hygiene instruction techniques <span class="lesson-duration">30 min</span></li>
+                <li>Risk assessment tools <span class="lesson-duration">25 min</span></li>
+              </ul>
+            </div>
+          </div>
+          
+          <div class="accordion-item">
+            <button class="accordion-header">
+              <span class="header-title">Module 3: Clinical Procedures</span>
+              <span class="header-meta">
+                <span class="lesson-count">12 lessons</span>
+                <span class="header-icon">+</span>
+              </span>
+            </button>
+            <div class="accordion-content">
+              <ul class="module-list">
+                <li>Pediatric restorative techniques <span class="lesson-duration">55 min</span></li>
+                <li>Pulp therapy for primary teeth <span class="lesson-duration">50 min</span></li>
+                <li>Space maintenance <span class="lesson-duration">40 min</span></li>
+                <li>Management of dental trauma <span class="lesson-duration">45 min</span></li>
+                <li>Local anesthesia techniques <span class="lesson-duration">35 min</span></li>
+              </ul>
+            </div>
+          </div>
+          
+          <div class="accordion-item">
+            <button class="accordion-header">
+              <span class="header-title">Module 4: Special Considerations</span>
+              <span class="header-meta">
+                <span class="lesson-count">12 lessons</span>
+                <span class="header-icon">+</span>
+              </span>
+            </button>
+            <div class="accordion-content">
+              <ul class="module-list">
+                <li>Children with special needs <span class="lesson-duration">50 min</span></li>
+                <li>Medically compromised patients <span class="lesson-duration">45 min</span></li>
+                <li>Pharmacological behavior management <span class="lesson-duration">55 min</span></li>
+                <li>Emergency protocols <span class="lesson-duration">40 min</span></li>
+                <li>Final assessment <span class="lesson-duration">60 min</span></li>
+              </ul>
+            </div>
+          </div>
+          
+          <div class="curriculum-footer">
+            <button class="download-syllabus-btn">
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                <path d="M8 1V11M8 11L11 8M8 11L5 8" stroke="var(--accent)" stroke-width="2" stroke-linecap="round"/>
+                <path d="M3 13H13" stroke="var(--accent)" stroke-width="2" stroke-linecap="round"/>
+              </svg>
+              <span>Download Full Syllabus</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Benefits List -->
+        <div class="content-block benefits-block">
+          <h2 class="block-title">What You'll Gain</h2>
+          <ul class="benefits-list">
+            <li>
+              <span class="benefit-icon">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                  <circle cx="12" cy="12" r="10" fill="var(--accent)" fill-opacity="0.2" stroke="var(--accent)" stroke-width="2"/>
+                  <path d="M8 12L11 15L16 9" stroke="var(--accent)" stroke-width="2" stroke-linecap="round"/>
+                </svg>
+              </span>
+              <span class="benefit-text">Hands-on clinical simulation training</span>
+            </li>
+            <li>
+              <span class="benefit-icon">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                  <circle cx="12" cy="12" r="10" fill="var(--accent)" fill-opacity="0.2" stroke="var(--accent)" stroke-width="2"/>
+                  <path d="M8 12L11 15L16 9" stroke="var(--accent)" stroke-width="2" stroke-linecap="round"/>
+                </svg>
+              </span>
+              <span class="benefit-text">Expert faculty with pediatric specialization</span>
+            </li>
+            <li>
+              <span class="benefit-icon">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                  <circle cx="12" cy="12" r="10" fill="var(--accent)" fill-opacity="0.2" stroke="var(--accent)" stroke-width="2"/>
+                  <path d="M8 12L11 15L16 9" stroke="var(--accent)" stroke-width="2" stroke-linecap="round"/>
+                </svg>
+              </span>
+              <span class="benefit-text">Case-based learning with real scenarios</span>
+            </li>
+            <li>
+              <span class="benefit-icon">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                  <circle cx="12" cy="12" r="10" fill="var(--accent)" fill-opacity="0.2" stroke="var(--accent)" stroke-width="2"/>
+                  <path d="M8 12L11 15L16 9" stroke="var(--accent)" stroke-width="2" stroke-linecap="round"/>
+                </svg>
+              </span>
+              <span class="benefit-text">CME credits upon completion</span>
+            </li>
+            <li>
+              <span class="benefit-icon">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                  <circle cx="12" cy="12" r="10" fill="var(--accent)" fill-opacity="0.2" stroke="var(--accent)" stroke-width="2"/>
+                  <path d="M8 12L11 15L16 9" stroke="var(--accent)" stroke-width="2" stroke-linecap="round"/>
+                </svg>
+              </span>
+              <span class="benefit-text">Lifetime access to course materials</span>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Instructor Section (New) -->
+        <div class="content-block instructor-block">
+          <h2 class="block-title">Course Instructor</h2>
+          <div class="instructor-card">
+            <div class="instructor-avatar">
+              <img src="https://images.pexels.com/photos/5215024/pexels-photo-5215024.jpeg?auto=compress&cs=tinysrgb&w=200&h=200&fit=crop" alt="Dr. Sarah Mitchell">
+            </div>
+            <div class="instructor-info">
+              <h3 class="instructor-name">Dr. Sarah Mitchell</h3>
+              <p class="instructor-title">Pediatric Dentistry Specialist · 15+ years experience</p>
+              <p class="instructor-bio">Dr. Mitchell has trained over 2,000 dental professionals in pediatric care and is a leading researcher in child behavior management.</p>
+              <div class="instructor-stats">
+                <span>⭐ 4.9 instructor rating</span>
+                <span>📚 8 courses</span>
+                <span>👥 3.5k+ students</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Testimonials Section (New) -->
+        <div class="content-block testimonials-block">
+          <h2 class="block-title">What Students Say</h2>
+          <div class="testimonials-slider">
+            <div class="testimonial-card">
+              <div class="testimonial-rating">★★★★★</div>
+              <p class="testimonial-text">"This course transformed my approach to pediatric patients. The modules on behavior guidance were incredibly practical and immediately applicable."</p>
+              <div class="testimonial-author">
+                <span class="author-name">Dr. James Wilson</span>
+                <span class="author-date">Completed 2 months ago</span>
+              </div>
+            </div>
+            <div class="testimonial-card">
+              <div class="testimonial-rating">★★★★★</div>
+              <p class="testimonial-text">"Excellent depth and very well structured. The instructor's expertise really shines through. Worth every penny."</p>
+              <div class="testimonial-author">
+                <span class="author-name">Dr. Priya Patel</span>
+                <span class="author-date">Completed 1 week ago</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- FAQ Section (New) -->
+        <div class="content-block faq-block">
+          <h2 class="block-title">Frequently Asked Questions</h2>
+          <div class="faq-item">
+            <button class="faq-question">
+              <span>Is this course accredited?</span>
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer">
+              <p>Yes, this course provides 15 CME credits accredited by the Academy of Pediatric Dentistry.</p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question">
+              <span>How long do I have access?</span>
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer">
+              <p>You get lifetime access to all course materials, including future updates.</p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question">
+              <span>Is there a money-back guarantee?</span>
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer">
+              <p>Absolutely! We offer a 30-day money-back guarantee if you're not satisfied.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right Column: Enhanced Sticky Sidebar -->
+      <div class="course-sidebar">
+        <div class="sidebar-card">
+          <div class="card-price">
+            <span class="price-currency">$</span>
+            <span class="price-value">1,299</span>
+            <span class="price-original">$1,599</span>
+            <span class="price-discount">Save 20%</span>
+          </div>
+          
+          <!-- Countdown Timer (New) -->
+          <div class="countdown-timer">
+            <span class="timer-label">🎯 Offer ends in:</span>
+            <div class="timer-display">
+              <span class="timer-days">02</span>
+              <span class="timer-sep">:</span>
+              <span class="timer-hours">14</span>
+              <span class="timer-sep">:</span>
+              <span class="timer-minutes">35</span>
+              <span class="timer-sep">:</span>
+              <span class="timer-seconds">42</span>
+            </div>
+          </div>
+          
+          <ul class="sidebar-features">
+            <li>
+              <svg width="18" height="18" viewBox="0 0 18 18" fill="none">
+                <circle cx="9" cy="9" r="8" stroke="var(--accent)" stroke-width="2"/>
+                <path d="M5 9L7 11L12 6" stroke="var(--accent)" stroke-width="2" stroke-linecap="round"/>
+              </svg>
+              <span>12 weeks duration</span>
+            </li>
+            <li>
+              <svg width="18" height="18" viewBox="0 0 18 18" fill="none">
+                <circle cx="9" cy="9" r="8" stroke="var(--accent)" stroke-width="2"/>
+                <path d="M5 9L7 11L12 6" stroke="var(--accent)" stroke-width="2" stroke-linecap="round"/>
+              </svg>
+              <span>15 CME credits</span>
+            </li>
+            <li>
+              <svg width="18" height="18" viewBox="0 0 18 18" fill="none">
+                <circle cx="9" cy="9" r="8" stroke="var(--accent)" stroke-width="2"/>
+                <path d="M5 9L7 11L12 6" stroke="var(--accent)" stroke-width="2" stroke-linecap="round"/>
+              </svg>
+              <span>Certificate included</span>
+            </li>
+            <li>
+              <svg width="18" height="18" viewBox="0 0 18 18" fill="none">
+                <circle cx="9" cy="9" r="8" stroke="var(--accent)" stroke-width="2"/>
+                <path d="M5 9L7 11L12 6" stroke="var(--accent)" stroke-width="2" stroke-linecap="round"/>
+              </svg>
+              <span>24/7 lifetime access</span>
+            </li>
+            <li>
+              <svg width="18" height="18" viewBox="0 0 18 18" fill="none">
+                <circle cx="9" cy="9" r="8" stroke="var(--accent)" stroke-width="2"/>
+                <path d="M5 9L7 11L12 6" stroke="var(--accent)" stroke-width="2" stroke-linecap="round"/>
+              </svg>
+              <span>Expert support</span>
+            </li>
+          </ul>
+          
+          <button class="sidebar-enroll" id="sidebarEnrollBtn">Enroll Now</button>
+          
+          <div class="payment-methods">
+            <span>Secure payment:</span>
+            <div class="payment-icons">
+              <span>Visa</span>
+              <span>MC</span>
+              <span>Amex</span>
+              <span>PayPal</span>
+            </div>
+          </div>
+          
+          <div class="sidebar-guarantee">
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+              <path d="M10 2L12 7H18L13 11L15 16L10 13L5 16L7 11L2 7H8L10 2Z" fill="var(--accent)"/>
+            </svg>
+            <span>30-day money-back guarantee</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+</body>
+<script src="coursedetails.js"></script>
+<script src="script.js"></script>
+</html>

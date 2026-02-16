@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="csss/style.css">
+    <link rel="stylesheet" href="blog.css">
+</head>
+<body>
+    <!-- Floating Settings Button - COLORFUL -->
+  <button class="floating-settings" id="themeToggleBtn">
+    <span class="color-dots">
+      <span style="background: #FF6B35;"></span>
+      <span style="background: #7AC943;"></span>
+      <span style="background: #FF1493;"></span>
+      <span style="background: #FFD700;"></span>
+    </span>
+  </button>
+
+  <!-- Theme Panel -->
+  <div class="theme-panel" id="themePanel">
+    <div class="theme-panel-header">
+      <h4>Themes</h4>
+      <button class="close-panel" id="closePanel">✕</button>
+    </div>
+    <div class="theme-options">
+      <div class="theme-option" data-theme="theme1">Royal Purple</div>
+      <div class="theme-option" data-theme="theme2">Ocean Teal</div>
+      <div class="theme-option" data-theme="theme3">Berry Pink</div>
+      <div class="theme-option" data-theme="theme4">Forest Green</div>
+      <div class="theme-option" data-theme="theme5">Sunset Orange</div>
+    </div>
+  </div>
+    <section class="blog-listing">
+  <div class="blog-container">
+    <!-- Section Header -->
+    <div class="blog-header">
+      <h2 class="blog-title">Latest Insights & News</h2>
+      <p class="blog-subtitle">Stay updated with the latest in pediatric dentistry</p>
+      <div class="blog-header-line"></div>
+    </div>
+    
+    <!-- Blog Grid -->
+    <div class="blog-grid">
+      <!-- Blog Card 1 -->
+      <article class="blog-card">
+        <div class="card-image-wrapper">
+          <img src="https://images.pexels.com/photos/3779718/pexels-photo-3779718.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop" alt="Pediatric Dentistry Tips" class="card-image" loading="lazy">
+          <div class="image-overlay"></div>
+          <span class="card-category">Clinical</span>
+        </div>
+        <div class="card-content">
+          <h3 class="card-title">5 Essential Tips for Pediatric Dental Care</h3>
+          <p class="card-excerpt">Learn the fundamental approaches to making dental visits positive experiences for children...</p>
+          <div class="card-meta">
+            <span class="meta-date">Feb 15, 2024</span>
+            <span class="meta-read">5 min read</span>
+          </div>
+          <a href="#" class="read-more-btn">
+            <span>Read More</span>
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+              <path d="M1 8H15M15 8L8 1M15 8L8 15" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+            </svg>
+          </a>
+        </div>
+      </article>
+      
+      <!-- Blog Card 2 -->
+      <article class="blog-card">
+        <div class="card-image-wrapper">
+          <img src="https://images.pexels.com/photos/3845641/pexels-photo-3845641.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop" alt="Advanced Techniques" class="card-image" loading="lazy">
+          <div class="image-overlay"></div>
+          <span class="card-category">Education</span>
+        </div>
+        <div class="card-content">
+          <h3 class="card-title">Advanced Sedation Techniques for Pediatric Patients</h3>
+          <p class="card-excerpt">Exploring the latest protocols in pediatric sedation and pain management for complex procedures...</p>
+          <div class="card-meta">
+            <span class="meta-date">Feb 10, 2024</span>
+            <span class="meta-read">8 min read</span>
+          </div>
+          <a href="#" class="read-more-btn">
+            <span>Read More</span>
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+              <path d="M1 8H15M15 8L8 1M15 8L8 15" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+            </svg>
+          </a>
+        </div>
+      </article>
+      
+      <!-- Blog Card 3 -->
+      <article class="blog-card">
+        <div class="card-image-wrapper">
+          <img src="https://images.pexels.com/photos/7659566/pexels-photo-7659566.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop" alt="Orthodontics" class="card-image" loading="lazy">
+          <div class="image-overlay"></div>
+          <span class="card-category">Orthodontics</span>
+        </div>
+        <div class="card-content">
+          <h3 class="card-title">Early Orthodontic Intervention: When to Start?</h3>
+          <p class="card-excerpt">Guidelines for identifying orthodontic issues in children and determining the optimal timing for treatment...</p>
+          <div class="card-meta">
+            <span class="meta-date">Feb 5, 2024</span>
+            <span class="meta-read">6 min read</span>
+          </div>
+          <a href="#" class="read-more-btn">
+            <span>Read More</span>
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+              <path d="M1 8H15M15 8L8 1M15 8L8 15" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+            </svg>
+          </a>
+        </div>
+      </article>
+      
+      <!-- Blog Card 4 -->
+      <article class="blog-card">
+        <div class="card-image-wrapper">
+          <img src="https://images.pexels.com/photos/7659558/pexels-photo-7659558.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop" alt="Special Needs" class="card-image" loading="lazy">
+          <div class="image-overlay"></div>
+          <span class="card-category">Special Care</span>
+        </div>
+        <div class="card-content">
+          <h3 class="card-title">Comprehensive Care for Children with Special Needs</h3>
+          <p class="card-excerpt">Strategies for providing effective dental care to children with developmental and physical challenges...</p>
+          <div class="card-meta">
+            <span class="meta-date">Feb 1, 2024</span>
+            <span class="meta-read">7 min read</span>
+          </div>
+          <a href="#" class="read-more-btn">
+            <span>Read More</span>
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+              <path d="M1 8H15M15 8L8 1M15 8L8 15" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+            </svg>
+          </a>
+        </div>
+      </article>
+      
+      <!-- Blog Card 5 -->
+      <article class="blog-card">
+        <div class="card-image-wrapper">
+          <img src="https://images.pexels.com/photos/8539951/pexels-photo-8539951.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop" alt="Preventive Care" class="card-image" loading="lazy">
+          <div class="image-overlay"></div>
+          <span class="card-category">Prevention</span>
+        </div>
+        <div class="card-content">
+          <h3 class="card-title">The Role of Fluoride in Modern Pediatric Dentistry</h3>
+          <p class="card-excerpt">Evidence-based approaches to fluoride therapy and caries prevention in children and adolescents...</p>
+          <div class="card-meta">
+            <span class="meta-date">Jan 28, 2024</span>
+            <span class="meta-read">5 min read</span>
+          </div>
+          <a href="#" class="read-more-btn">
+            <span>Read More</span>
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+              <path d="M1 8H15M15 8L8 1M15 8L8 15" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+            </svg>
+          </a>
+        </div>
+      </article>
+      
+      <!-- Blog Card 6 -->
+      <article class="blog-card">
+        <div class="card-image-wrapper">
+          <img src="https://images.pexels.com/photos/3779709/pexels-photo-3779709.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop" alt="Research" class="card-image" loading="lazy">
+          <div class="image-overlay"></div>
+          <span class="card-category">Research</span>
+        </div>
+        <div class="card-content">
+          <h3 class="card-title">Latest Research in Pediatric Dental Materials</h3>
+          <p class="card-excerpt">Innovations in biocompatible materials and their applications in children's restorative dentistry...</p>
+          <div class="card-meta">
+            <span class="meta-date">Jan 22, 2024</span>
+            <span class="meta-read">10 min read</span>
+          </div>
+          <a href="#" class="read-more-btn">
+            <span>Read More</span>
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+              <path d="M1 8H15M15 8L8 1M15 8L8 15" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+            </svg>
+          </a>
+        </div>
+      </article>
+    </div>
+    
+    <!-- View All Button -->
+    <div class="blog-view-all">
+      <a href="#" class="view-all-btn">
+        <span>View All Articles</span>
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
+          <path d="M5 12H19M19 12L15 8M19 12L15 16" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </a>
+    </div>
+  </div>
+</section>
+</body>
+<script src="script.js"></script>
+<script src="blog.js"></script>
+</html>
