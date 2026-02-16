@@ -1,0 +1,309 @@
+/* Instagram Spacious - Full Width Embed with No Side Padding */
+.instagram-spacious {
+  position: relative;
+  padding: 80px 0 0;
+  background: var(--primary);
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  overflow: hidden;
+  isolation: isolate;
+}
+
+/* Subtle background pattern */
+.spacious-bg-pattern {
+  position: absolute;
+  inset: 0;
+  background-image: radial-gradient(circle at 20% 30%, rgba(255, 255, 255, 0.03) 0px, transparent 50px),
+                    radial-gradient(circle at 80% 70%, rgba(255, 255, 255, 0.03) 0px, transparent 50px);
+  background-size: 100px 100px;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.spacious-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 40px;
+  position: relative;
+  z-index: 2;
+}
+
+/* Top Text Content - Centered */
+.spacious-text-content {
+  text-align: center;
+  margin-bottom: 60px;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: spaciousFadeUp 0.8s ease forwards;
+}
+
+.spacious-heading {
+  font-size: clamp(2.5rem, 5vw, 3.5rem);
+  font-weight: 700;
+  color: white;
+  margin: 0 0 16px 0;
+  letter-spacing: -0.02em;
+  text-shadow: 0 2px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Accent line */
+.spacious-accent-line {
+  width: 100px;
+  height: 4px;
+  background: var(--accent);
+  margin: 0 auto 24px;
+  border-radius: 4px;
+  position: relative;
+  overflow: hidden;
+}
+
+.spacious-accent-line::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.5), transparent);
+  animation: spaciousShimmer 2s ease-in-out infinite;
+}
+
+@keyframes spaciousShimmer {
+  100% {
+    left: 100%;
+  }
+}
+
+.spacious-subtext {
+  font-size: 1.2rem;
+  color: rgba(255, 255, 255, 0.9);
+  margin: 0;
+  font-weight: 400;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1.6;
+}
+
+/* Bottom Embed Wrapper - Full Width */
+.spacious-embed-wrapper {
+  opacity: 0;
+  transform: translateY(30px);
+  animation: spaciousFadeUp 0.8s 0.2s ease forwards;
+  width: 100vw;
+  margin-left: calc(-50vw + 50%);
+  margin-right: calc(-50vw + 50%);
+  background: white;
+  padding: 40px 0 60px;
+  position: relative;
+  box-shadow: 0 -10px 30px -10px rgba(0, 0, 0, 0.1);
+}
+
+/* Add top curve effect */
+.spacious-embed-wrapper::before {
+  content: '';
+  position: absolute;
+  top: -20px;
+  left: 0;
+  width: 100%;
+  height: 40px;
+  background: white;
+  border-radius: 50% 50% 0 0;
+  transform: scaleX(1.05);
+  z-index: 1;
+}
+
+.spacious-embed-container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 40px;
+  position: relative;
+  z-index: 2;
+  min-height: 500px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Elfsight embed styling - Full width inside container */
+.elfsight-app-8f3eba95-0446-4f7c-9e9a-4386f21ac64d {
+  width: 100% !important;
+  min-height: 480px;
+  border-radius: 24px;
+  overflow: hidden;
+  box-shadow: 0 30px 60px -20px rgba(0, 0, 0, 0.3);
+  transition: all 0.4s ease;
+}
+
+.elfsight-app-8f3eba95-0446-4f7c-9e9a-4386f21ac64d:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 40px 70px -20px rgba(0, 0, 0, 0.4), 0 0 0 3px var(--accent);
+}
+
+/* Loading state */
+.spacious-embed-container:empty {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 480px;
+  position: relative;
+}
+
+.spacious-embed-container:empty::before {
+  content: 'Loading Instagram feed...';
+  color: var(--primary);
+  font-weight: 500;
+  padding: 20px;
+  text-align: center;
+  background: #f9f9f9;
+  border-radius: 24px;
+  width: 100%;
+  max-width: 600px;
+}
+
+.spacious-embed-container:empty::after {
+  content: '';
+  width: 40px;
+  height: 40px;
+  border: 3px solid rgba(90, 62, 152, 0.2);
+  border-top-color: var(--primary);
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  animation: spaciousSpin 1s linear infinite;
+}
+
+@keyframes spaciousSpin {
+  to { transform: translate(-50%, -50%) rotate(360deg); }
+}
+
+/* Animation */
+@keyframes spaciousFadeUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .spacious-container {
+    padding: 0 30px;
+  }
+  
+  .spacious-embed-container {
+    padding: 0 30px;
+  }
+  
+  .elfsight-app-8f3eba95-0446-4f7c-9e9a-4386f21ac64d {
+    min-height: 450px;
+  }
+}
+
+@media (max-width: 768px) {
+  .instagram-spacious {
+    padding: 60px 0 0;
+  }
+  
+  .spacious-text-content {
+    margin-bottom: 50px;
+  }
+  
+  .spacious-heading {
+    font-size: 2.8rem;
+  }
+  
+  .spacious-subtext {
+    font-size: 1.1rem;
+    padding: 0 20px;
+  }
+  
+  .spacious-embed-wrapper {
+    padding: 30px 0 50px;
+  }
+  
+  .spacious-embed-container {
+    padding: 0 20px;
+    min-height: 400px;
+  }
+  
+  .elfsight-app-8f3eba95-0446-4f7c-9e9a-4386f21ac64d {
+    min-height: 400px;
+  }
+  
+  .spacious-accent-line {
+    width: 80px;
+  }
+}
+
+@media (max-width: 480px) {
+  .instagram-spacious {
+    padding: 50px 0 0;
+  }
+  
+  .spacious-container {
+    padding: 0 20px;
+  }
+  
+  .spacious-heading {
+    font-size: 2.2rem;
+  }
+  
+  .spacious-text-content {
+    margin-bottom: 40px;
+  }
+  
+  .spacious-subtext {
+    font-size: 1rem;
+  }
+  
+  .spacious-embed-wrapper {
+    padding: 20px 0 40px;
+  }
+  
+  .spacious-embed-wrapper::before {
+    top: -15px;
+    height: 30px;
+  }
+  
+  .spacious-embed-container {
+    padding: 0 16px;
+    min-height: 350px;
+  }
+  
+  .elfsight-app-8f3eba95-0446-4f7c-9e9a-4386f21ac64d {
+    min-height: 350px;
+    border-radius: 20px;
+  }
+  
+  .spacious-accent-line {
+    width: 60px;
+  }
+}
+
+/* Small phones */
+@media (max-width: 360px) {
+  .spacious-heading {
+    font-size: 2rem;
+  }
+  
+  .spacious-embed-container {
+    min-height: 300px;
+  }
+  
+  .elfsight-app-8f3eba95-0446-4f7c-9e9a-4386f21ac64d {
+    min-height: 300px;
+  }
+}
+
+/* Ensure Elfsight embed takes full width */
+[class*="elfsight-app"] {
+  width: 100% !important;
+}
+
+/* Smooth transitions */
+.elfsight-app-8f3eba95-0446-4f7c-9e9a-4386f21ac64d,
+.spacious-accent-line {
+  transition: all 0.3s ease;
+}
